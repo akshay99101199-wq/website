@@ -1,0 +1,113 @@
+.page-header {
+    background-image: url('assets/about.png');
+    background-size: 100% 100%;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.page-header .container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding-left: 40px;
+
+}
+
+.page-header h1 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-top: 80px;
+}
+
+.page-header .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: #FF681B;
+}
+
+.page-header .breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.page-header .breadcrumb .active {
+    color: #FF681B;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        min-height: 240px;
+        background-position: 60% center;
+    }
+
+    .page-header .container {
+        padding-left: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* About Cards */
+
+.about-info-boxes {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-info-box {
+    background: rgba(245, 130, 42, .08);
+    border: 1px solid var(--navy);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    flex: 1;
+}
+
+ .about-info-box:hover {
+     background: rgba(245, 130, 42, .08);
+     border-color: rgba(245, 130, 42, .35);
+     transform: translateY(-6px);
+     transition: all ease 1s;
+ }
+
+ .about-info-box:hover::after {
+     transform: scale(2);
+ }
+
+.about-info-box .icon {
+    font-size: 24px;
+    color: var(--secondary-color);
+    background: var(--secondary-light);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.about-info-box h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.about-info-box p {
+    font-size: 13px;
+    margin: 0;
+}

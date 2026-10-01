@@ -1,0 +1,512 @@
+        .premium-footer {
+            position: relative;
+            background:
+                radial-gradient(circle at 50% 45%,
+                    rgba(40, 91, 160, 0.16),
+                    transparent 45%),
+                #0c172d;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Light background image */
+        .premium-footer::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/footer.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.10;
+            z-index: 0;
+        }
+
+        /* Footer ka actual content */
+        .premium-footer>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .premium-footer-main {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            gap: 55px;
+            padding: 75px 0 55px;
+        }
+
+
+        /* Company */
+
+        .footer-brand {
+            display: inline-block;
+            margin-bottom: 22px;
+        }
+
+        .footer-brand img {
+            width: 180px;
+            height: auto;
+            display: block;
+        }
+
+        .footer-description {
+            max-width: 390px;
+            color: #a8abb3;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 0 0 25px;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-contact a {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            color: #c9cbd0;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .footer-contact a i {
+            color: var(--secondary-color);
+            width: 18px;
+        }
+
+        .footer-contact a:hover {
+            color: var(--secondary-color);
+        }
+
+
+        /* Social */
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: #ffffff;
+            transform: translateY(-4px);
+        }
+
+
+        /* Footer Columns */
+
+        .premium-footer-column h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 4px 0 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .premium-footer-column h4 span {
+            width: 4px;
+            height: 20px;
+            background: var(--secondary-color);
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .premium-footer-column ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .premium-footer-column ul li {
+            margin-bottom: 13px;
+        }
+
+        .premium-footer-column ul li a {
+            color: #a8abb3;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .premium-footer-column ul li a i {
+            font-size: 8px;
+            margin-right: 9px;
+            color: var(--secondary-color);
+            transition: 0.3s ease;
+        }
+
+        .premium-footer-column ul li a:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .premium-footer-column ul li a:hover i {
+            transform: translateX(3px);
+        }
+
+
+        /* Bottom */
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 22px 0;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: #777b84;
+            font-size: 11px;
+        }
+
+        .footer-bottom strong {
+            color: #bfc1c7;
+        }
+
+        .footer-bottom i {
+            color: var(--secondary-color);
+            margin: 0 3px;
+        }
+
+
+        /* =========================================================
+   RESPONSIVE
+========================================================= */
+
+        @media (max-width: 992px) {
+
+            .premium-footer-main {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 40px;
+            }
+
+            .footer-company {
+                grid-column: 1 / -1;
+            }
+
+            .footer-description {
+                max-width: 650px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .premium-footer-main {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px 25px;
+                padding: 55px 0 40px;
+            }
+
+            .footer-company {
+                grid-column: 1 / -1;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .premium-footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .premium-footer-column {
+                width: 100%;
+            }
+
+            .footer-brand img {
+                width: 160px;
+            }
+
+            .footer-description {
+                font-size: 13px;
+            }
+
+        }
+
+
+
+        /* ==========================================
+   DHRONIX PARTNER / HOW WE WORK
+   ========================================== */
+
+/* RIGHT SIDE */
+
+.dhronix-howwork-area {
+    flex: 1;
+    position: relative;
+    padding: 0px 5px 15px;
+}
+
+/* PROCESS LIST */
+
+.dhronix-process-list {
+    position: relative;
+}
+
+/* Vertical connecting line */
+
+.dhronix-process-list::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 24px;
+    width: 1px;
+    background: currentColor;
+    opacity: .12;
+}
+
+
+/* PROCESS ITEM */
+
+.dhronix-process-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    transition: transform .3s ease;
+}
+
+.dhronix-process-item:hover {
+    transform: translateX(5px);
+}
+
+
+/* NUMBER */
+
+.dhronix-process-number {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--orange-light);
+    border: 1px solid var(--secondary-color);
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ICON */
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 991px) {
+
+    .dhronix-howwork-area {
+        padding-left: 0;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .dhronix-process-item {
+        gap: 10px;
+    }
+
+    .dhronix-process-number {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .dhronix-process-list::before {
+        left: 20px;
+    }
+}
+
+
+/* ==========================================
+   DHRONIX SEAMLESS INFINITE SCROLL
+   ========================================== */
+
+.dhronix-scroll-gallery {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 8%,
+        #000 92%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 8%,
+        #000 92%,
+        transparent 100%
+    );
+}
+
+
+/* FOUR COLUMNS */
+
+.dhronix-gallery-column {
+    width: 25%;
+    min-width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    will-change: transform;
+}
+
+
+/* IMAGE CARD */
+
+.dhronix-gallery-card {
+    width: 100%;
+    height: 150px;
+    min-height: 150px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+
+.dhronix-gallery-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform .5s ease;
+}
+
+
+/* ==========================================
+   COLUMN 1 & 3 → UP
+   ========================================== */
+
+.dhronix-gallery-up {
+    animation: dhronixInfiniteUp 14s linear infinite;
+}
+
+
+/* ==========================================
+   COLUMN 2 & 4 → DOWN
+   ========================================== */
+
+.dhronix-gallery-down {
+    animation: dhronixInfiniteDown 14s linear infinite;
+}
+
+
+/* ==========================================
+   SEAMLESS UP
+   ========================================== */
+
+@keyframes dhronixInfiniteUp {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        /*
+         * 3 cards + 2 gaps
+         * 145px × 3 + 12px × 2
+         */
+        transform: translateY(-459px);
+    }
+}
+
+
+/* ==========================================
+   SEAMLESS DOWN
+   ========================================== */
+
+@keyframes dhronixInfiniteDown {
+
+    from {
+        transform: translateY(-459px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   HOVER PAUSE
+   ========================================== */
+
+.dhronix-scroll-gallery:hover .dhronix-gallery-column {
+    animation-play-state: paused;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 767px) {
+
+    .dhronix-scroll-gallery {
+        width: 100%;
+        height: 400px;
+        gap: 8px;
+    }
+
+    .dhronix-gallery-column {
+        width: 25%;
+        min-width: 25%;
+        gap: 8px;
+    }
+
+    .dhronix-gallery-card {
+        height: 120px;
+        min-height: 120px;
+        border-radius: 10px;
+    }
+
+}

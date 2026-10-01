@@ -1,0 +1,334 @@
+/* ===== SHARED SERVICE PAGE STYLES ===== */
+
+/* Page Hero Banner */
+.service-page-hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1a4a7a 100%);
+    padding: 180px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1.5" fill="rgba(255,255,255,0.04)"/></svg>');
+}
+
+.service-hero-inner {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.service-hero-content {
+    flex: 1.2;
+}
+
+.service-hero-img {
+    flex: 0.8;
+}
+
+.service-hero-img img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.service-page-hero .sub-heading {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.service-page-hero h1 {
+    font-size: 52px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.service-page-hero p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-btns-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-row {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb-row a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.breadcrumb-row li+li::before {
+    content: '/';
+    margin-right: 8px;
+}
+
+/* Floating icon badge on hero */
+.hero-icon-badge {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 25px;
+    box-shadow: 0 15px 35px rgba(243, 108, 33, 0.4);
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-8px)
+    }
+}
+
+/* ---- Features / Benefits grid ---- */
+.features-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.feature-box {
+    background: var(--white);
+    border: 1px solid #eaeaea;
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(243, 108, 33, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.feature-box .f-icon {
+    color: var(--secondary-color);
+    font-size: 22px;
+    background: var(--secondary-light);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.feature-box h4 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.feature-box p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ---- How it works steps ---- */
+.steps-list {
+    margin-top: 40px;
+}
+
+.step-row {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 14px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--secondary-color);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.step-row:hover::before {
+    opacity: 1;
+}
+
+.step-row:hover {
+    border-color: rgba(243, 108, 33, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateX(5px);
+}
+
+.step-number {
+    font-size: 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: var(--secondary-light);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 60px;
+}
+
+.step-content h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.step-content p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ---- Side image section ---- */
+.side-section {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.side-section>div {
+    flex: 1;
+}
+
+.side-img {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.side-img img {
+    width: 100%;
+    display: block;
+}
+
+/* ---- Benefits checklist ---- */
+.benefits-list {
+    list-style: none;
+    margin: 20px 0 30px;
+}
+
+.benefits-list li {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-dark);
+}
+
+.benefits-list li i {
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+/* ---- CTA Banner ---- */
+.service-cta {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1a4a7a 100%);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+}
+
+.service-cta h2 {
+    color: #fff;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.service-cta p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* ---- Shared page header ---- */
+.page-header {
+    background: radial-gradient(circle at 50% 50%, #f0f0f0 0%, #045ca1 100%);
+    padding: 180px 0 80px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.breadcrumb a {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.breadcrumb .active {
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .service-hero-inner,
+    .side-section {
+        flex-direction: column;
+    }
+
+    .features-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .service-page-hero h1 {
+        font-size: 36px;
+    }
+}
