@@ -14,8 +14,8 @@
             content: "";
             position: absolute;
             inset: 0;
-            background-image: url('assets/footer.png');
-            background-size: cover;
+             background-image: url('../footer.png'); 
+             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             opacity: 0.10;

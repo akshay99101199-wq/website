@@ -235,7 +235,7 @@
                     <div class="industry-footer">
                         <div class="industry-left">
                             <span class="industry-icon"><i class="fas fa-building"></i></span>
-                            <span class="industry-title">Financial (NBFC/Nidhi)</span>
+                            <span class="industry-title">Financial Software</span>
                         </div>
                         <a href="#" class="industry-arrow"><i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -285,6 +285,7 @@
     <section class="solutions dark-section-services">
         <!-- Background Video -->
         <video class="solutions-video" autoplay muted loop playsinline>
+            <!-- <source src="https://ik.imagekit.io/skxiwi7ro/DBT_Media/services.mp4" type="video/mp4"> -->
             <source src="https://ik.imagekit.io/skxiwi7ro/DBT_Media/service.mp4" type="video/mp4">
         </video>
 
