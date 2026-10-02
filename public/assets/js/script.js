@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const featureStack = document.querySelector('.feature-image-stack');
+    if (featureStack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const stackCards = Array.from(featureStack.querySelectorAll('.feature-stack-card'));
+        window.setInterval(() => {
+            stackCards.forEach((card) => {
+                card.dataset.position = String((Number(card.dataset.position) + 1) % stackCards.length);
+            });
+        }, 2800);
+    }
     
     // --- 1. Custom Cursor Logic ---
     const cursorDot = document.querySelector('[data-cursor-dot]');
