@@ -38,10 +38,14 @@ Route::get('/services/erp-accounting', function () {
 })->name('erp-accounting');
 
 Route::get('/services/mobile-development', function () {
-    return view('services.mobile-development');
+    return view('services.mobile-apps');
 })->name('mobile-apps');
 
-Route::get('/services/web-development', function () {
-    return view('services.web-development');
-})->name('web-development');
+Route::get('/services/ecommerce', function () {
+    return view('services.ecommerce');
+})->name('ecommerce');
 
+
+Route::get('/services/cloud-hosting', function () {
+    return view('services.cloud-hosting');
+})->name('cloud-hosting');

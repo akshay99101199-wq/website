@@ -25,7 +25,7 @@
     <!-- Preloader with Dhronix DBT Logo -->
     <div id="preloader">
         <div class="loader-logo-container">
-            <img src="assets/logo.png" alt="DBT Logo Loader" class="loader-logo">
+            <img src="{{ asset('assets/logo.png') }}" alt="DBT Logo Loader" class="loader-logo">
         </div>
         <div class="loader-pulse"></div>
     </div>

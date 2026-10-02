@@ -34,7 +34,7 @@
                 <p>Introducing Nidhi Software by Dhronix Tech - a seamless and secure way to manage your company's
                     daily operations, member accounts, and loans. Experience hassle-free transactions and automated
                     workflows.</p>
-                <a href="nidhi-software.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <a href="{{ route('nidhi-software') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="service-item animate-on-scroll delay-1">
                 <div class="icon-box"><i class="fas fa-university"></i></div>
@@ -43,7 +43,7 @@
                 <p>Introducing NBFC Solutions by Dhronix Tech - your one-stop platform for hassle-free loan
                     management, EMI collections, and accounting. Enjoy the convenience of managing everything
                     securely.</p>
-                <a href="nbfc-software.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <a href="{{ route('nbfc-software') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="service-item animate-on-scroll delay-2">
                 <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
@@ -52,7 +52,7 @@
                 <p>Introducing robust ERP Accounting - the simplest and secure way to manage your enterprise
                     finances, inventory, and billing. Say goodbye to manual ledgers and enjoy the convenience of
                     automation.</p>
-                <a href="erp-accounting.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <a href="{{ route('erp-accounting') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="service-item animate-on-scroll">
                 <div class="icon-box"><i class="fas fa-shopping-cart"></i></div>
@@ -61,7 +61,7 @@
                 <p>Introducing robust eCommerce platform development - the fastest way to sell locally and
                     internationally. Experience seamless B2B & B2C transactions with our customized storefront
                     solutions.</p>
-                <a href="ecommerce.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <a href="{{ route('ecommerce') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="service-item animate-on-scroll delay-1">
                 <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
@@ -70,7 +70,7 @@
                 <p>Introducing custom Native Mobile Apps - the easiest way to reach your customers on Android and
                     iOS. Enjoy seamless user experiences with our high-performance, flawlessly designed mobile
                     applications.</p>
-                <a href="mobile-apps.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <a href="{{ route('mobile-apps') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="service-item animate-on-scroll delay-2">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -78,7 +78,7 @@
                 <h3>Cloud Hosting</h3>
                 <p>Introducing Enterprise Cloud Hosting - a hassle-free and secure way to deploy your applications
                     with 99.99% uptime. Experience the ease of scaling your digital infrastructure on demand.</p>
-                <a href="cloud-hosting.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <a href="{{ route('cloud-hosting') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </div>

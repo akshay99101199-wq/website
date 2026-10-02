@@ -15,42 +15,42 @@
                               class="fas fa-chevron-down" style="font-size:10px; margin-left:5px;"></i></a>
                       <!-- Mega Menu Dropdown -->
                       <div class="dropdown-menu">
-                          <a href="services.html" class="dropdown-item">
+                          <a href="{{route('nidhi-software')}}" class="dropdown-item">
                               <div class="dropdown-icon"><i class="fas fa-laptop-code"></i></div>
                               <div class="dropdown-text">
                                   <h4>Nidhi Software</h4>
                                   <p>Secure Nidhi management</p>
                               </div>
                           </a>
-                          <a href="services.html" class="dropdown-item">
+                          <a href="{{route('nbfc-software')}}" class="dropdown-item">
                               <div class="dropdown-icon"><i class="fas fa-university"></i></div>
                               <div class="dropdown-text">
                                   <h4>NBFC Software</h4>
                                   <p>Loan & EMI tracking</p>
                               </div>
                           </a>
-                          <a href="services.html" class="dropdown-item">
+                          <a href="{{route('erp-accounting')}}" class="dropdown-item">
                               <div class="dropdown-icon"><i class="fas fa-file-invoice-dollar"></i></div>
                               <div class="dropdown-text">
                                   <h4>ERP Accounting</h4>
                                   <p>Complete ERP modules</p>
                               </div>
                           </a>
-                          <a href="services.html" class="dropdown-item">
+                          <a href="{{route('ecommerce')}}" class="dropdown-item">
                               <div class="dropdown-icon"><i class="fas fa-shopping-cart"></i></div>
                               <div class="dropdown-text">
                                   <h4>eCommerce</h4>
                                   <p>Welcome to our eCommerce platform</p>
                               </div>
                           </a>
-                          <a href="services.html" class="dropdown-item">
+                          <a href="{{route('mobile-apps')}}" class="dropdown-item">
                               <div class="dropdown-icon"><i class="fas fa-mobile-alt"></i></div>
                               <div class="dropdown-text">
                                   <h4>Mobile Apps</h4>
                                   <p>iOS & Android native</p>
                               </div>
                           </a>
-                          <a href="services.html" class="dropdown-item">
+                          <a href="{{route('cloud-hosting')}}" class="dropdown-item">
                               <div class="dropdown-icon"><i class="fas fa-cloud"></i></div>
                               <div class="dropdown-text">
                                   <h4>Cloud Hosting</h4>

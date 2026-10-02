@@ -6,8 +6,8 @@
         <div class="premium-footer-main">
 
             <!-- Company -->
-            <div class="footer-company"><a href="index.html" class="footer-brand">
-                    <img src="assets/logobgrem.png""
+                <div class="footer-company"><a href="{{ route('home') }}" class="footer-brand">
+                    <img src="{{ asset('assets/logobgrem.png') }}"
                         alt="Dhronix Bharat Technologies">
                 </a>
                 <p class="footer-description">
