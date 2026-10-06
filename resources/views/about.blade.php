@@ -70,7 +70,7 @@
         <div class="approach-cards">
             <div class="approach-card animate-on-scroll">
                 <div class="approach-content">
-                    <div class="icon"><i class="fas fa-rocket"></i></div>
+                    <!-- <div class="icon"><i class="fas fa-rocket"></i></div> -->
                     <h3>Our Mission</h3>
                     <p style="font-size: 14px;">We aim to revolutionize businesses with secure, innovative software
                         solutions that drive growth and operational efficiency.</p>
@@ -82,7 +82,7 @@
             </div>
             <div class="approach-card animate-on-scroll delay-1">
                 <div class="approach-content">
-                    <div class="icon"><i class="fas fa-eye"></i></div>
+                    <!-- <div class="icon"><i class="fas fa-eye"></i></div> -->
                     <h3>Our Vision</h3>
                     <p style="font-size: 14px;">Our vision is to lead IT innovation, transforming how businesses
                         manage their ecosystems and transactions with ease.</p>
@@ -94,7 +94,7 @@
             </div>
             <div class="approach-card animate-on-scroll delay-2">
                 <div class="approach-content">
-                    <div class="icon"><i class="fas fa-history"></i></div>
+                    <!-- <div class="icon"><i class="fas fa-history"></i></div> -->
                     <h3>Our History</h3>
                     <p style="font-size: 14px;">Founded with a passion for innovation and a commitment to
                         excellence, we set out to transform the digital software landscape.</p>
@@ -109,7 +109,7 @@
 </section>
 
 <!-- 3. Our Feature Section -->
-<section class="section-padding dark-section">
+<section class="section-padding dark-section feature-sections">
     <div class="container">
         <div class="about-section-heading animate-on-scroll">
             <div>
@@ -119,7 +119,6 @@
             </div>
             <div><a href="contact.html" class="btn btn-primary-solid">Contact Now</a></div>
         </div>
-
         <div class="feature-image-stack" aria-hidden="true">
             <figure class="feature-stack-card" data-position="0"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
             <figure class="feature-stack-card" data-position="1"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
@@ -128,51 +127,6 @@
             <figure class="feature-stack-card" data-position="4"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
             <figure class="feature-stack-card" data-position="5"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
             <figure class="feature-stack-card" data-position="6"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
-        </div>
-
-        <div class="feature-list">
-            <div class="feature-card dark-card animate-on-scroll">
-                <div class="icon" style="color:var(--secondary-color); font-size:35px; margin-bottom:15px;"><i
-                        class="fas fa-cogs"></i></div>
-                <h3>Comprehensive Solutions</h3>
-                <p style="color:rgba(255,255,255,0.7); font-size:14px;">From Nidhi to ERP, we cover it all, ensuring
-                    all your software needs are met conveniently.</p>
-            </div>
-            <div class="feature-card dark-card animate-on-scroll delay-1">
-                <div class="icon" style="color:var(--secondary-color); font-size:35px; margin-bottom:15px;"><i
-                        class="fas fa-bolt"></i></div>
-                <h3>Efficiency Guaranteed</h3>
-                <p style="color:rgba(255,255,255,0.7); font-size:14px;">Our streamlined processes and cutting-edge
-                    technology ensure swift execution and hassle-free experiences.</p>
-            </div>
-            <div class="feature-card dark-card animate-on-scroll delay-2">
-                <div class="icon" style="color:var(--secondary-color); font-size:35px; margin-bottom:15px;"><i
-                        class="fas fa-user-tie"></i></div>
-                <h3>Tailored Support</h3>
-                <p style="color:rgba(255,255,255,0.7); font-size:14px;">We understand your unique requirements and
-                    offer personalized solutions to help you achieve goals.</p>
-            </div>
-            <div class="feature-card dark-card animate-on-scroll">
-                <div class="icon" style="color:var(--secondary-color); font-size:35px; margin-bottom:15px;"><i
-                        class="fas fa-users"></i></div>
-                <h3>Customer-Centric</h3>
-                <p style="color:rgba(255,255,255,0.7); font-size:14px;">With a focus on your satisfaction, we strive
-                    to provide the best-in-class services, all under one roof.</p>
-            </div>
-            <div class="feature-card dark-card animate-on-scroll delay-1">
-                <div class="icon" style="color:var(--secondary-color); font-size:35px; margin-bottom:15px;"><i
-                        class="fas fa-shield-alt"></i></div>
-                <h3>Secure Infrastructure</h3>
-                <p style="color:rgba(255,255,255,0.7); font-size:14px;">We ensure your data is safe with advanced
-                    encryption and secure software architecture.</p>
-            </div>
-            <div class="feature-card dark-card animate-on-scroll delay-2">
-                <div class="icon" style="color:var(--secondary-color); font-size:35px; margin-bottom:15px;"><i
-                        class="fas fa-trophy"></i></div>
-                <h3>Best Solutions</h3>
-                <p style="color:rgba(255,255,255,0.7); font-size:14px;">Delivering exceptional results and
-                    Innovative solutions maximizing your operational success.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -187,13 +141,54 @@
             <p>We provide expert software and consulting solutions designed to foster growth, stability, and
                 long-term success across multiple platforms.</p>
 
-            <ul class="what-we-do-list">
-                <li><i class="fas fa-check-circle"></i> Best IT Solutions</li>
-                <li><i class="fas fa-check-circle"></i> Secure Architecture</li>
-                <li><i class="fas fa-check-circle"></i> Cost Effective (Save Money)</li>
-                <li><i class="fas fa-check-circle"></i> Quick Support</li>
-            </ul>
-            <a href="contact.html" class="btn btn-dark-solid">Contact Now</a>
+            <div class="dhronix-howwork-area">
+
+                <div class="dhronix-process-list features-list">
+
+                    <!-- STEP 01 -->
+                    <div class="dhronix-process-item">
+                        <div class="dhronix-process-number"><i class="fas fa-paint-brush fs-6"></i></div>
+
+                        <div>
+                            <h4>Best IT Solutions</h4>
+                            <p>Control fonts, colors, featured products, and UI flow.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 02 -->
+                    <div class="dhronix-process-item">
+                        <div class="dhronix-process-number"><i class="fas fa-layer-group fs-6"></i></div>
+
+
+                        <div>
+                            <h4>Cost Effective (Save Money)</h4>
+                            <p>Connect to thousands of APIs, modules, and gateways.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 03 -->
+                    <div class="dhronix-process-item">
+                        <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
+
+                        <div>
+                            <h4>Quick Support</h4>
+                            <p>Easily set rules for margins, discounts, and markups.</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 04 -->
+                    <div class="dhronix-process-item">
+                        <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
+
+                        <div>
+                            <h4>Secure Architecture</h4>
+                            <p>Get complete visibility into traffic, conversion, and revenue.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
         </div>
 
         <div class="about-us-images animate-on-scroll delay-1">
@@ -215,49 +210,81 @@
 
 <!-- 6. How It Work Section -->
 <section class="section-padding">
-    <div class="container about-flex">
-        <div class="animate-on-scroll">
+    <div class="container">
+        <div class="animate-on-scroll" style="max-width: 700px; margin-bottom: 28px;">
             <span class="sub-heading">HOW IT WORK</span>
             <h2 style="font-size: 38px; margin-bottom: 20px;">Our process for digital <br><span
                     class="highlight">success</span></h2>
-            <p style="margin-bottom: 30px;">Our process is designed to guide you every step of the way. From initial
+            <p>Our process is designed to guide you every step of the way. From initial
                 consultation to personalized software deployment and strategy development.</p>
-             <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?q=80&w=2070&auto=format&fit=crop"
-                style="width: 90%; border-radius: 15px; margin-top: 40px;" alt="Benefits">
-        
         </div>
 
-        <div class="animate-on-scroll delay-1">
-            <div class="step-item">
-                <div>
-                    <span class="sub-heading">STEP</span>
-                    <h3 style="font-size:22px; margin-bottom:10px;">Initial Consultation</h3>
-                    <p style="font-size:14px; margin:0;">We begin with a one-on-one consultation to understand your
-                        digital goals, challenges, and priorities.</p>
+        <div class="how-it-work-layout">
+            <div class="how-it-work-visual animate-on-scroll">
+                <img id="how-it-work-visual-image"
+                    src="https://images.unsplash.com/photo-1553484771-371a605b060b?q=80&w=2070&auto=format&fit=crop"
+                    alt="Initial Consultation">
+                <div class="how-it-work-visual-badge">
+                    <span class="sub-heading">ACTIVE STEP</span>
+                    <strong id="how-it-work-visual-label">Initial Consultation</strong>
                 </div>
-                <div class="step-number">01</div>
             </div>
-            <div class="step-item">
-                <div>
-                    <span class="sub-heading">STEP</span>
-                    <h3 style="font-size:22px; margin-bottom:10px;">Success Pathway</h3>
-                    <p style="font-size:14px; margin:0;">We outline the technical roadmap and select the best
-                        software modules to fit your needs.</p>
-                </div>
-                <div class="step-number">02</div>
-            </div>
-            <div class="step-item">
-                <div>
-                    <span class="sub-heading">STEP</span>
-                    <h3 style="font-size:22px; margin-bottom:10px;">Growth Strategy</h3>
-                    <p style="font-size:14px; margin:0;">We launch the project and continuously monitor performance
-                        to guarantee long-term growth.</p>
-                </div>
-                <div class="step-number">03</div>
+
+            <div class="how-it-work-steps animate-on-scroll delay-1">
+                <button type="button" class="step-item active" data-image="https://images.unsplash.com/photo-1553484771-371a605b060b?q=80&w=2070&auto=format&fit=crop" data-title="Initial Consultation" aria-selected="true">
+                    <div class="step-copy">
+                        <span class="sub-heading">STEP</span>
+                        <h3 class="step-title">Initial Consultation</h3>
+                        <p>We begin with a one-on-one consultation to understand your digital goals, challenges, and priorities.</p>
+                    </div>
+                    <div class="step-number">01</div>
+                </button>
+
+                <button type="button" class="step-item" data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" data-title="Success Pathway" aria-selected="false">
+                    <div class="step-copy">
+                        <span class="sub-heading">STEP</span>
+                        <h3 class="step-title">Success Pathway</h3>
+                        <p>We outline the technical roadmap and select the best software modules to fit your needs.</p>
+                    </div>
+                    <div class="step-number">02</div>
+                </button>
+
+                <button type="button" class="step-item" data-image="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" data-title="Growth Strategy" aria-selected="false">
+                    <div class="step-copy">
+                        <span class="sub-heading">STEP</span>
+                        <h3 class="step-title">Growth Strategy</h3>
+                        <p>We launch the project and continuously monitor performance to guarantee long-term growth.</p>
+                    </div>
+                    <div class="step-number">03</div>
+                </button>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.step-item');
+        const image = document.getElementById('how-it-work-visual-image');
+        const title = document.getElementById('how-it-work-visual-label');
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                tabs.forEach(function (item) {
+                    item.classList.remove('active');
+                    item.setAttribute('aria-selected', 'false');
+                });
+
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+
+                image.src = tab.dataset.image;
+                image.alt = tab.dataset.title;
+                title.textContent = tab.dataset.title;
+            });
+        });
+    });
+</script>
 
 <!-- 7. Our Testimonial Section -->
 <section class="section-padding" style="background-color: #fafbfc;">
@@ -270,8 +297,7 @@
                 personalized guidance, and impactful results.</p>
         </div>
 
-        <div class="testimonial-grid animate-on-scroll delay-1">
-            <!-- Testimonial 1 -->
+        <div class="testimonial-carousel animate-on-scroll delay-1">
             <div class="testimonial-card">
                 <i class="fas fa-quote-right quote-icon"></i>
                 <p class="test-text">"Their Nidhi and ERP solutions have simplified our operations and provided
@@ -287,7 +313,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Testimonial 2 -->
             <div class="testimonial-card">
                 <i class="fas fa-quote-right quote-icon"></i>
                 <p class="test-text">"Choosing Dhronix for our eCommerce development was the best decision. Their
@@ -301,6 +326,19 @@
                         <span
                             style="font-size:12px; color:var(--secondary-color); font-weight:600; text-transform:uppercase;">CEO,
                             Retail Solutions</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="test-text">"The onboarding experience was smooth, and the custom modules helped us scale faster while keeping our data and processes secure."</p>
+                <div class="author">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1587&auto=format&fit=crop"
+                        alt="Rahul">
+                    <div>
+                        <h4 style="margin:0; font-size:16px;">Rahul Sharma</h4>
+                        <span
+                            style="font-size:12px; color:var(--secondary-color); font-weight:600; text-transform:uppercase;">Operations Head</span>
                     </div>
                 </div>
             </div>

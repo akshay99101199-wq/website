@@ -66,6 +66,28 @@
                 ]
             });
 
+            $('.testimonial-carousel').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 4200,
+                infinite: true,
+                speed: 700,
+                cssEase: 'cubic-bezier(0.22, 1, 0.36, 1)',
+                responsive: [{
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1,
+                            arrows: false
+                        }
+                    }
+                ]
+            });
+
         });
     </script>
 
