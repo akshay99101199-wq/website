@@ -6,29 +6,32 @@
         <div class="premium-footer-main">
 
             <!-- Company -->
-                <div class="footer-company"><a href="{{ route('home') }}" class="footer-brand">
+                <div class="footer-company animate-on-scroll"><a href="{{ route('home') }}" class="footer-brand">
                     <img src="{{ asset('assets/logobgrem.png') }}"
                         alt="Dhronix Bharat Technologies">
                 </a>
                 <p class="footer-description">
-                    Dhronix Bharat Technologies delivers innovative software,
+                    We delivers innovative software,
                     fintech, web, mobile and cloud solutions.
                 </p>
                 <div class="footer-contact">
-                    <a href="tel:+917571002226">
+                    <a href="tel:1234567890">
                         <i class="fas fa-phone-alt"></i>
-                        +91 75710 02226
-                    </a> <a href="mailto:info@dhronix.com">
+                        1234567890
+                    </a> <a href="mailto:info.dhronixbharattechnologies@gmail.com">
                         <i class="fas fa-envelope"></i>
-                        info@dhronix.com
+                        info.dhronixbharat@gmail.com
                     </a>
                 </div><!-- Social Media -->
                 <div class="footer-social">
-                    <a href="#" aria-label="Facebook">
+                    <a href="https://www.facebook.com/people/Dhronix-Bharat-Technologies" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook-f"></i>
-                    </a> <a href="#" aria-label="Instagram">
+                    </a> <a href="https://www.instagram.com/dbtdhronixtechnologies/" aria-label="Instagram"
+                        target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-instagram"></i>
-                    </a> <a href="#" aria-label="LinkedIn">
+                    </a> <a href="https://www.linkedin.com/in/dbt-dhronix-bharat-technologies-a67a433ba/"
+                        aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin-in"></i>
                     </a> <a href="#" aria-label="Twitter">
                         <i class="fab fa-youtube"></i>
@@ -37,75 +40,81 @@
 
             </div>
             <!-- Products -->
-            <div class="premium-footer-column">
+            <div class="premium-footer-column animate-on-scroll delay-1">
                 <h4><i class="fas fa-box-open" style="color:var(--secondary-color);"></i>
                     Products
                 </h4>
                 <ul>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('nidhi-software') }}">
                             <i class="fas fa-chevron-right"></i>
                             Nidhi Software
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('nbfc-software') }}">
                             <i class="fas fa-chevron-right"></i>
                             NBFC Software
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('erp-accounting') }}">
                             <i class="fas fa-chevron-right"></i>
                             ERP Accounting
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('mobile-apps') }}">
                             <i class="fas fa-chevron-right"></i>
-                            White Label Portal
+                            Mobile Application
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('ecommerce') }}">
                             <i class="fas fa-chevron-right"></i>
                             eCommerce Solutions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('cloud-hosting') }}">
+                            <i class="fas fa-chevron-right"></i>
+                           Cloud Hosting
                         </a>
                     </li>
                 </ul>
 
             </div>
             <!-- Services -->
-            <div class="premium-footer-column">
+            <div class="premium-footer-column animate-on-scroll delay-2">
                 <h4><i class="fas fa-industry" style="color:var(--secondary-color);"></i>Services
                 </h4>
                 <ul>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('services') }}">
                             <i class="fas fa-chevron-right"></i>
                             Web Development
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('services') }}">
                             <i class="fas fa-chevron-right"></i>
                             Mobile App Development
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('services') }}">
                             <i class="fas fa-chevron-right"></i>
                             UI / UX Design
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('services') }}">
                             <i class="fas fa-chevron-right"></i>
                             Cloud Solutions
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('services') }}">
                             <i class="fas fa-chevron-right"></i>
                             IT Consulting
                         </a>
@@ -114,39 +123,45 @@
 
             </div>
             <!-- Company -->
-            <div class="premium-footer-column">
+            <div class="premium-footer-column animate-on-scroll delay-3">
                 <h4><i class="fas fa-building" style="color:var(--secondary-color);"></i>
                     Company
                 </h4>
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="{{ route('home') }}">
                             <i class="fas fa-chevron-right"></i>
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="about.html">
+                        <a href="{{ route('about') }}">
                             <i class="fas fa-chevron-right"></i>
                             About Us
                         </a>
                     </li>
                     <li>
-                        <a href="services.html">
+                        <a href="{{ route('services') }}">
                             <i class="fas fa-chevron-right"></i>
                             Our Services
                         </a>
                     </li>
                     <li>
-                        <a href="contact.html">
+                        <a href="{{ route('contact') }}">
                             <i class="fas fa-chevron-right"></i>
                             Contact Us
                         </a>
                     </li>
                     <li>
+                        <a href="{{ route('portfolio') }}">
+                            <i class="fas fa-chevron-right"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
                         <a href="#">
                             <i class="fas fa-chevron-right"></i>
-                            Partner With Us
+                            Login Portal
                         </a>
                     </li>
                 </ul>

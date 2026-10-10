@@ -982,12 +982,18 @@ body p {
 }
 
 .section-label {
-      color: var(--orange);
-      font-weight: 600;
-      font-size: .85rem;
-      display: inline-flex;
-      align-items: center;
-    }
-      display: inline-block;
+    color: var(--orange);
+    font-weight: 600;
+    font-size: .85rem;
+    display: inline-flex;
+    align-items: center;
+}
 
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
+}

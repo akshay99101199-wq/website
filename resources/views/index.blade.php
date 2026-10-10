@@ -7,7 +7,7 @@
 
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="hero-badge"><i class="fa-solid fa-award"></i> Leading IT Technology Partner</span>
+                <span class="hero-badge animate-fade-up"><i class="fa-solid fa-award"></i> Leading IT Technology Partner</span>
                 <h1 class="animate-fade-up delay-1">Next-Gen Software <br>Platform for <br><span class="highlight"><span
                             class="typed-text"></span><span class="cursor-blink">|</span></span></h1>
 
@@ -26,8 +26,8 @@
                 </div>
 
                 <div class="hero-btns animate-fade-up delay-4">
-                    <a href="contact.html" class="btn btn-primary-solid">Schedule a Demo</a>
-                    <a href="services.html" class="btn btn-outline-light-custom">Start Your Business</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary-solid">Schedule a Demo</a>
+                    <a href="{{ route('services') }}" class="btn btn-outline-light-custom">Start Your Business</a>
                 </div>
             </div>
 
@@ -93,8 +93,8 @@
                 </div>
 
                 <div class="hero-btns animate-fade-up delay-4">
-                    <a href="contact.html" class="btn btn-primary-solid">Schedule a Demo</a>
-                    <a href="services.html" class="btn btn-outline-light-custom">Start Your Business</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary-solid">Schedule a Demo</a>
+                    <a href="{{ route('services') }}" class="btn btn-outline-light-custom">Start Your Business</a>
                 </div>
             </div>
 
@@ -297,9 +297,9 @@
                 <h2 class="text-white">All Types of Software Services Under <br>One Umbrella</h2>
             </div>
 
-            <div class="service-grid services-carousel">
+            <div class="service-grid services-carousel animate-on-scroll delay-1">
 
-                <div class="service-card reveal">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fas fa-laptop-code"></i>
                     </div>
@@ -307,10 +307,10 @@
                     <p>
                         Gain access to robust, secure, and compliant Nidhi Company software to manage operations
                         for your clients.
-                    </p><a href="services.html" class="card-link">Explore Software &rarr;</a>
+                    </p><a href="{{ route('services') }}" class="card-link">Explore Software &rarr;</a>
                 </div>
 
-                <div class="service-card reveal">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-landmark"></i>
                     </div>
@@ -319,10 +319,10 @@
                         Find the best-value NBFC solutions tailored for your loan management, EMI tracking, and business
                         needs.
                     </p>
-                    <a href="services.html" class="card-link">Browse Solutions &rarr;</a>
+                    <a href="{{ route('services') }}" class="card-link">Browse Solutions &rarr;</a>
                 </div>
 
-                <div class="service-card reveal">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-file-invoice-dollar"></i>
                     </div>
@@ -331,10 +331,10 @@
                         Easy and convenient ERP accounting software with reliable billing and inventory modules at your
                         fingertips.
                     </p>
-                    <a href="services.html" class="card-link">View ERP &rarr;</a>
+                    <a href="{{ route('services') }}" class="card-link">View ERP &rarr;</a>
                 </div>
 
-                <div class="service-card reveal">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
@@ -343,10 +343,10 @@
                         Offer robust domestic & international eCommerce platforms to give online shopping
                         experiences.
                     </p>
-                    <a href="services.html" class="card-link">View eCommerce &rarr;</a>
+                    <a href="{{ route('services') }}" class="card-link">View eCommerce &rarr;</a>
                 </div>
 
-                <div class="service-card reveal">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-bullhorn"></i>
                     </div>
@@ -355,9 +355,9 @@
                         Grow your business with powerful digital marketing,
                         SEO, social media and performance marketing solutions.
                     </p>
-                    <a href="services.html" class="card-link"> Explore Marketing &rarr;</a>
+                    <a href="{{ route('services') }}" class="card-link"> Explore Marketing &rarr;</a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
@@ -366,9 +366,9 @@
                         Build modern, scalable and user-friendly mobile
                         applications for Android and iOS platforms.
                     </p>
-                    <a href="services.html" class="card-link"> Explore Apps &rarr;</a>
+                    <a href="{{ route('services') }}" class="card-link"> Explore Apps &rarr;</a>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card">
                     <div class="service-icon">
                         <i class="fa-solid fa-code"></i>
                     </div>
@@ -377,7 +377,7 @@
                         Get custom-built software solutions designed around
                         your business requirements and workflow.
                     </p>
-                    <a href="services.html" class="card-link">Build Software &rarr;</a>
+                    <a href="{{ route('services') }}" class="card-link">Build Software &rarr;</a>
                 </div>
 
             </div>
@@ -400,7 +400,7 @@
                     <div class="dhronix-process-list features-list">
 
                         <!-- STEP 01 -->
-                        <div class="dhronix-process-item">
+                        <div class="dhronix-process-item animate-on-scroll">
                             <div class="dhronix-process-number"><i class="fas fa-paint-brush fs-6"></i></div>
 
                             <div>
@@ -410,7 +410,7 @@
                         </div>
 
                         <!-- STEP 02 -->
-                        <div class="dhronix-process-item">
+                        <div class="dhronix-process-item animate-on-scroll delay-1">
                             <div class="dhronix-process-number"><i class="fas fa-layer-group fs-6"></i></div>
 
 
@@ -421,7 +421,7 @@
                         </div>
 
                         <!-- STEP 03 -->
-                        <div class="dhronix-process-item">
+                        <div class="dhronix-process-item animate-on-scroll delay-2">
                             <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
 
                             <div>
@@ -431,7 +431,7 @@
                         </div>
 
                         <!-- STEP 04 -->
-                        <div class="dhronix-process-item">
+                        <div class="dhronix-process-item animate-on-scroll delay-3">
                             <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
 
                             <div>
@@ -481,7 +481,7 @@
                         <br /> scale
                         smarter, and grow without limits.
                     </p>
-                    <a href="contact.html" class="btn btn-primary-solid">Book a demo &rarr;</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary-solid">Book a demo &rarr;</a>
                 </div>
                 <div class="cta-graphic">
                     <!-- Placeholder for the illustration -->

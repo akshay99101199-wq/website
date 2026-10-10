@@ -74,12 +74,12 @@
 <div class="portfolio-hero page-header">
     <div class="container">
         <h1 class="animate-fade-up">Our <span style="color: var(--secondary-color);">Portfolio</span></h1>
-        <h5 class="text-silver mt-3">Empowering Businesses with <br />Innovative Technology Solutions</h5>
-        <p class="text-silver mt-3">At Dhronix Technologies, we deliver innovative <br /> software solutions that help businesses grow and succeed.
+        <h5 class="text-silver mt-3 animate-fade-up delay-1">Empowering Businesses with <br />Innovative Technology Solutions</h5>
+        <p class="text-silver mt-3 animate-fade-up delay-2">At Dhronix Technologies, we deliver innovative <br /> software solutions that help businesses grow and succeed.
         </p>
 
-        <ul class="breadcrumb animate-fade-up delay-1">
-            <li><a href="index.html"> Home</a></li>
+        <ul class="breadcrumb animate-fade-up delay-3">
+            <li><a href="{{ route('home') }}"> Home</a></li>
             <li>/</li>
             <li class="active">Portfolio</li>
         </ul>
@@ -89,14 +89,14 @@
 <main class="portfolio-main">
     <section class="portfolio-projects" id="projects" aria-labelledby="portfolio-project-heading">
         <div class="portfolio-container">
-            <div class="portfolio-section-heading">
+            <div class="portfolio-section-heading animate-on-scroll">
                 <div>
                     <span class="portfolio-eyebrow">Built for real work</span>
                     <h2 id="portfolio-project-heading">Recent <span>Projects</span></h2>
                 </div>
             </div>
 
-            <div class="portfolio-filters" role="group" aria-label="Filter projects">
+            <div class="portfolio-filters animate-on-scroll delay-1" role="group" aria-label="Filter projects">
                 <button class="portfolio-filter is-active" type="button" data-filter="all" aria-pressed="true">All Projects</button>
                 <button class="portfolio-filter" type="button" data-filter="finance" aria-pressed="false">Finance</button>
                 <button class="portfolio-filter" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
@@ -107,8 +107,8 @@
             <p class="portfolio-result-count" aria-live="polite"></p>
 
             <div class="portfolio-grid">
-                @foreach ($projects as $project)
-                    <article class="portfolio-card"
+                @foreach ($projects as $index => $project)
+                    <article class="portfolio-card animate-on-scroll{{ $index % 3 === 1 ? ' delay-1' : ($index % 3 === 2 ? ' delay-2' : '') }}"
                         data-categories="{{ $project['filters'] }}"
                         data-project-title="{{ $project['title'] }}"
                         data-project-description="{{ $project['description'] }}"
@@ -134,7 +134,7 @@
         </div>
     </section>
 
-    <section class="portfolio-cta" aria-labelledby="portfolio-cta-heading">
+    <section class="portfolio-cta animate-on-scroll" aria-labelledby="portfolio-cta-heading">
         <div class="portfolio-cta-inner">
             <div>
                 <span class="portfolio-eyebrow">Have a project in mind?</span>

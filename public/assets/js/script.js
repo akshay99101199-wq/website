@@ -70,16 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. Loader Logic ---
     const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        if(preloader) {
+    if (preloader) {
+        setTimeout(() => {
             preloader.style.opacity = '0';
             setTimeout(() => {
                 preloader.style.display = 'none';
                 triggerHeroAnimations();
                 if(typedTextSpan) setTimeout(type, newTextDelay - 1000);
             }, 500);
-        }
-    }, 1200);
+        }, 1200);
+    } else {
+        triggerHeroAnimations();
+        if(typedTextSpan) setTimeout(type, 500);
+    }
 
     // --- 4. Header Scroll Effect ---
     const header = document.querySelector('.header');

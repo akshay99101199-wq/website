@@ -77,7 +77,7 @@
             <h2>Everything your Nidhi Company needs</h2>
         </div>
         <div class="service-feature-explorer nidhi-feature-explorer">
-            <div class="service-feature-visual nidhi-feature-preview" aria-live="polite">
+            <div class="service-feature-visual nidhi-feature-preview animate-on-scroll" aria-live="polite">
                 <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&amp;w=1470&amp;auto=format&amp;fit=crop"
                     alt="Nidhi member management" data-feature-preview-image>
                 <div class="service-feature-visual-caption">
@@ -89,42 +89,42 @@
             </div>
             <div class="service-feature-list nidhi-feature-list" role="group" aria-label="Nidhi Software key features">
                 <div class="features-grid-2">
-                    <button class="feature-box service-feature-item nidhi-feature-item is-active" type="button"
+                    <button class="feature-box service-feature-item nidhi-feature-item is-active animate-on-scroll" type="button"
                         data-feature-image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&amp;w=1470&amp;auto=format&amp;fit=crop"
                         data-feature-image-alt="Team managing Nidhi member records">
                         <span class="f-icon"><i class="fas fa-users-cog"></i></span>
                         <div><h4>Member Management</h4><p>Complete member registration, KYC verification, passbook generation, and profile management with automated workflows.</p></div>
                         <span class="feature-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
                     </button>
-                    <button class="feature-box service-feature-item nidhi-feature-item" type="button"
+                    <button class="feature-box service-feature-item nidhi-feature-item animate-on-scroll delay-1" type="button"
                         data-feature-image="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&amp;w=1470&amp;auto=format&amp;fit=crop"
                         data-feature-image-alt="Savings and deposit management">
                         <span class="f-icon"><i class="fas fa-piggy-bank"></i></span>
                         <div><h4>Deposit &amp; Savings Modules</h4><p>Manage Fixed Deposits, Recurring Deposits, Savings Accounts with auto-interest calculations and maturity alerts.</p></div>
                         <span class="feature-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
                     </button>
-                    <button class="feature-box service-feature-item nidhi-feature-item" type="button"
+                    <button class="feature-box service-feature-item nidhi-feature-item animate-on-scroll delay-2" type="button"
                         data-feature-image="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&amp;w=1470&amp;auto=format&amp;fit=crop"
                         data-feature-image-alt="Nidhi loan planning and management">
                         <span class="f-icon"><i class="fas fa-hand-holding-usd"></i></span>
                         <div><h4>Loan Management</h4><p>Process and disburse loans with EMI schedules, automated reminders, collateral tracking, and penalty calculations.</p></div>
                         <span class="feature-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
                     </button>
-                    <button class="feature-box service-feature-item nidhi-feature-item" type="button"
+                    <button class="feature-box service-feature-item nidhi-feature-item animate-on-scroll delay-3" type="button"
                         data-feature-image="https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&amp;w=1470&amp;auto=format&amp;fit=crop"
                         data-feature-image-alt="Accounting and ledger reports">
                         <span class="f-icon"><i class="fas fa-file-alt"></i></span>
                         <div><h4>Accounting &amp; Ledger</h4><p>Double-entry accounting, balance sheet, P&amp;L reports, trial balance, and automated GST-ready statements.</p></div>
                         <span class="feature-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
                     </button>
-                    <button class="feature-box service-feature-item nidhi-feature-item" type="button"
+                    <button class="feature-box service-feature-item nidhi-feature-item animate-on-scroll" type="button"
                         data-feature-image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&amp;w=1470&amp;auto=format&amp;fit=crop"
                         data-feature-image-alt="Nidhi compliance documents and regulatory reporting">
                         <span class="f-icon"><i class="fas fa-shield-alt"></i></span>
                         <div><h4>RBI/MCA Compliance</h4><p>Built-in compliance modules for Nidhi Rules 2014 with automatic return filing and regulatory report generation.</p></div>
                         <span class="feature-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
                     </button>
-                    <button class="feature-box service-feature-item nidhi-feature-item" type="button"
+                    <button class="feature-box service-feature-item nidhi-feature-item animate-on-scroll delay-1" type="button"
                         data-feature-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&amp;w=1470&amp;auto=format&amp;fit=crop"
                         data-feature-image-alt="Nidhi performance dashboard and reports">
                         <span class="f-icon"><i class="fas fa-chart-bar"></i></span>

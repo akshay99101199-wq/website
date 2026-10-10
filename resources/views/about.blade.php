@@ -7,12 +7,12 @@
 <div class="page-header">
     <div class="container">
         <h1 class="animate-fade-up">About <span style="color: var(--secondary-color);">Us</span></h1>
-        <h5 class="text-silver mt-3">Empowering Businesses with <br />Innovative Technology Solutions</h5>
-        <p class="text-silver mt-3">At Dhronix Technologies, we deliver innovative <br /> software solutions that help businesses grow and succeed.
+        <h5 class="text-silver mt-3 animate-fade-up delay-1">Empowering Businesses with <br />Innovative Technology Solutions</h5>
+        <p class="text-silver mt-3 animate-fade-up delay-2">At Dhronix Technologies, we deliver innovative <br /> software solutions that help businesses grow and succeed.
         </p>
 
-        <ul class="breadcrumb animate-fade-up delay-1">
-            <li><a href="index.html"> Home</a></li>
+        <ul class="breadcrumb animate-fade-up delay-3">
+            <li><a href="{{ route('home') }}"> Home</a></li>
             <li>/</li>
             <li class="active">About Us</li>
         </ul>
@@ -65,7 +65,7 @@
                 <h2 style="font-size: 36px; margin:0;">Customized strategies for <br><span class="highlight">digital
                         success</span></h2>
             </div>
-            <div><a href="contact.html" class="btn btn-dark-solid">Contact Now</a></div>
+            <div><a href="{{ route('contact') }}" class="btn btn-dark-solid">Contact Now</a></div>
         </div>
         <div class="approach-cards">
             <div class="approach-card animate-on-scroll">
@@ -85,7 +85,7 @@
                     <!-- <div class="icon"><i class="fas fa-eye"></i></div> -->
                     <h3>Our Vision</h3>
                     <p style="font-size: 14px;">Our vision is to lead IT innovation, transforming how businesses
-                        manage their ecosystems and transactions with ease.</p>
+                        manage their ecosystems & transactions with ease.</p>
                 </div>
                 <div class="approach-image-frame">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
@@ -117,7 +117,7 @@
                 <h2 class="text-white" style="font-size: 36px; margin:0;">Key features of our IT <br><span
                         class="highlight">and consulting</span></h2>
             </div>
-            <div><a href="contact.html" class="btn btn-primary-solid">Contact Now</a></div>
+            <div><a href="{{ route('contact') }}" class="btn btn-primary-solid">Contact Now</a></div>
         </div>
         <div class="feature-image-stack" aria-hidden="true">
             <figure class="feature-stack-card" data-position="0"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
@@ -146,7 +146,7 @@
                 <div class="dhronix-process-list features-list">
 
                     <!-- STEP 01 -->
-                    <div class="dhronix-process-item">
+                    <div class="dhronix-process-item animate-on-scroll">
                         <div class="dhronix-process-number"><i class="fas fa-paint-brush fs-6"></i></div>
 
                         <div>
@@ -156,7 +156,7 @@
                     </div>
 
                     <!-- STEP 02 -->
-                    <div class="dhronix-process-item">
+                    <div class="dhronix-process-item animate-on-scroll delay-1">
                         <div class="dhronix-process-number"><i class="fas fa-layer-group fs-6"></i></div>
 
 
@@ -167,7 +167,7 @@
                     </div>
 
                     <!-- STEP 03 -->
-                    <div class="dhronix-process-item">
+                    <div class="dhronix-process-item animate-on-scroll delay-2">
                         <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
 
                         <div>
@@ -177,7 +177,7 @@
                     </div>
 
                     <!-- STEP 04 -->
-                    <div class="dhronix-process-item">
+                    <div class="dhronix-process-item animate-on-scroll delay-3">
                         <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
 
                         <div>
@@ -235,7 +235,7 @@
                     <div class="step-copy">
                         <span class="sub-heading">STEP</span>
                         <h3 class="step-title">Initial Consultation</h3>
-                        <p>We begin with a one-on-one consultation to understand your digital goals, challenges, and priorities.</p>
+                        <p>We begin with a one-on-one consultation to understand your goals, challenges, & priorities.</p>
                     </div>
                     <div class="step-number">01</div>
                 </button>

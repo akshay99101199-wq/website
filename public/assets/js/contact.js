@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         status.textContent = 'Your email app will open with your message prepared. Press Send there to complete your inquiry.';
         status.classList.add('is-visible');
-        window.location.href = `mailto:sales@dhronixtech.in?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:info.dhronixbharattechnologies@gmail.com?subject=${subject}&body=${body}`;
     });
 });

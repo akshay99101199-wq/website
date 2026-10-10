@@ -44,7 +44,7 @@
                 <h2>Complete NBFC Operations in One Platform</h2>
             </div>
             <div class="service-feature-explorer">
-                <div class="service-feature-visual">
+                <div class="service-feature-visual animate-on-scroll">
                     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" alt="NBFC loan management dashboard">
                     <div class="service-feature-visual-caption"><span>NBFC MANAGEMENT PLATFORM</span>
                         <h3 data-feature-preview-title>Loan Origination System</h3>
@@ -117,7 +117,7 @@
                 <p style="margin-bottom:30px;">From application to disbursement, everything happens digitally and in
                     record time.</p>
                 <div class="steps-list nidhi-onboarding-steps">
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP ONE</span>
@@ -126,7 +126,7 @@
                                 minutes.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP TWO</span>
@@ -135,7 +135,7 @@
                                 eligibility instantly.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP THREE</span>

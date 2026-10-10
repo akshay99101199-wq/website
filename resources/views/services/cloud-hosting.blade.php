@@ -42,7 +42,7 @@
                 <h2>Enterprise Cloud Hosting for Every Business Scale</h2>
             </div>
             <div class="service-feature-explorer">
-                <div class="service-feature-visual">
+                <div class="service-feature-visual animate-on-scroll">
                     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=1472&amp;auto=format&amp;fit=crop" alt="Cloud hosting infrastructure">
                     <div class="service-feature-visual-caption"><span>CLOUD HOSTING PLATFORM</span>
                         <h3 data-feature-preview-title>Dedicated Servers</h3>
@@ -115,7 +115,7 @@
                 <p style="margin-bottom:30px;">Our team handles the entire migration and setup so your business never
                     skips a beat.</p>
                 <div class="steps-list nidhi-onboarding-steps">
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP ONE</span>
@@ -124,7 +124,7 @@
                                 plan for your business.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP TWO</span>
@@ -133,7 +133,7 @@
                                 our proven migration protocol.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP THREE</span>

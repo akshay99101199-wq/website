@@ -42,7 +42,7 @@
                 <h2>Everything to Run a Successful Online Store</h2>
             </div>
             <div class="service-feature-explorer">
-                <div class="service-feature-visual">
+                <div class="service-feature-visual animate-on-scroll">
                     <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" alt="eCommerce store dashboard">
                     <div class="service-feature-visual-caption"><span>ECOMMERCE PLATFORM</span><h3 data-feature-preview-title>Custom Storefront Design</h3><p data-feature-preview-description>Explore the tools to launch and grow your online store.</p><div><i class="fas fa-shield-alt"></i> Built to grow with your business</div></div>
                 </div>
@@ -111,7 +111,7 @@
                 <p style="margin-bottom:30px;">We handle everything from design to deployment so you can focus on
                     selling.</p>
                 <div class="steps-list nidhi-onboarding-steps">
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP ONE</span>
@@ -120,7 +120,7 @@
                                 tailored to your brand.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP TWO</span>
@@ -129,7 +129,7 @@
                                 upload and testing done by us.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP THREE</span>

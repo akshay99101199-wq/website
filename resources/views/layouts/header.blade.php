@@ -65,7 +65,7 @@
                               style="margin-right:8px; color:var(--secondary-color)"></i>Portfolio</a></li>
               </ul>
               <div class="nav-right">
-                  <a href="contact.html" class="btn btn-primary-solid">
+                  <a href="{{ route('contact') }}" class="btn btn-primary-solid">
                       <i class="fas fa-user-circle" style="margin-right:8px;"></i>Sign in</a>
               </div>
               <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">

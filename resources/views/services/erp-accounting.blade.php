@@ -41,7 +41,7 @@
                 <h2>Comprehensive ERP Modules for Every Department</h2>
             </div>
             <div class="service-feature-explorer">
-                <div class="service-feature-visual">
+                <div class="service-feature-visual animate-on-scroll">
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&amp;w=2072&amp;auto=format&amp;fit=crop" alt="ERP accounting dashboard">
                     <div class="service-feature-visual-caption"><span>ERP BUSINESS PLATFORM</span><h3 data-feature-preview-title>Accounting &amp; Finance</h3><p data-feature-preview-description>Explore the tools that connect your business operations.</p><div><i class="fas fa-shield-alt"></i> Connected business operations</div></div>
                 </div>
@@ -110,7 +110,7 @@
                 <p style="margin-bottom:30px;">Our implementation team ensures a smooth transition from your current
                     system with zero data loss.</p>
                 <div class="steps-list nidhi-onboarding-steps">
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP ONE</span>
@@ -119,7 +119,7 @@
                                 business workflows.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP TWO</span>
@@ -128,7 +128,7 @@
                                 codes, and user roles.</p>
                         </div>
                     </div>
-                    <div class="step-row">
+                    <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
                             <span class="nidhi-step-label">STEP THREE</span>

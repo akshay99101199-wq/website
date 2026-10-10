@@ -6,10 +6,10 @@
 <!-- Page Header -->
 <header class="page-header services-page-header">
     <div class="container">
-        <span class="sub-heading">OUR SERVICES</span>
-        <h1 class="animate-fade-up">Software for <span>every stage.</span></h1>
-        <p class="services-hero-copy">Secure software and technology solutions built around the way your business works.</p>
-        <ul class="breadcrumb animate-fade-up delay-1">
+        <span class="sub-heading animate-fade-up">OUR SERVICES</span>
+        <h1 class="animate-fade-up delay-1">Software for <span>every stage.</span></h1>
+        <p class="services-hero-copy animate-fade-up delay-2">Secure software and technology solutions built around the way your business works.</p>
+        <ul class="breadcrumb animate-fade-up delay-3">
             <li><a href="{{ route('home') }}">Home</a></li>
             <li>/</li>
             <li class="active">Our Services</li>
@@ -21,7 +21,7 @@
 <!-- 1. Page Services Section -->
 <section class="section-padding" style="background-color: #fafbfc;">
     <div class="container">
-        <div class="service-catalog-heading">
+        <div class="service-catalog-heading animate-on-scroll">
             <span class="sub-heading">BUSINESS SYSTEMS</span>
             <h2>Tools for the work <span>you do.</span></h2>
             <p>Choose a focused solution or bring your operations together with one technology partner.</p>
@@ -86,14 +86,14 @@
 
 <section class="service-flow-band" aria-labelledby="service-flow-title">
     <div class="container service-flow-inner">
-        <div class="service-flow-heading">
+        <div class="service-flow-heading animate-on-scroll">
             <span>HOW WE WORK</span>
             <h2 id="service-flow-title">From business need to <em>better work.</em></h2>
         </div>
         <ol class="service-flow-list">
-            <li><span>01</span><div><h3>Understand</h3><p>Map your goals and workflow.</p></div></li>
-            <li><span>02</span><div><h3>Build</h3><p>Shape the right software setup.</p></div></li>
-            <li><span>03</span><div><h3>Support</h3><p>Keep your operations moving.</p></div></li>
+            <li class="animate-on-scroll"><span>01</span><div><h3>Understand</h3><p>Map your goals and workflow.</p></div></li>
+            <li class="animate-on-scroll delay-1"><span>02</span><div><h3>Build</h3><p>Shape the right software setup.</p></div></li>
+            <li class="animate-on-scroll delay-2"><span>03</span><div><h3>Support</h3><p>Keep your operations moving.</p></div></li>
         </ol>
     </div>
 </section>
@@ -133,13 +133,13 @@
 
 <section class="section-padding service-faq-section" aria-labelledby="service-faq-heading">
     <div class="container service-faq-layout">
-        <div class="service-faq-heading">
+        <div class="service-faq-heading animate-on-scroll">
             <span class="sub-heading">FAQ</span>
             <h2 id="service-faq-heading">Questions, <span>answered.</span></h2>
             <p>A few helpful details before we start planning your solution.</p>
             <a href="{{ route('contact') }}" class="service-faq-contact">Still have a question? Contact us <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="service-faq-list">
+        <div class="service-faq-list animate-on-scroll delay-1">
             <details class="service-faq-item" open>
                 <summary>What kind of software solutions do you offer?</summary>
                 <p>We work across Nidhi and NBFC software, ERP accounting, eCommerce, mobile applications, cloud hosting, and custom integrations.</p>

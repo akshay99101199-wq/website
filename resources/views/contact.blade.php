@@ -7,8 +7,8 @@
 <div class="page-header contact-page-header">
     <div class="container">
         <h1 class="animate-fade-up">Let's talk <span>business.</span></h1>
-        <p class="contact-hero-copy">Tell us what you need. Our team will help you find the right software solution.</p>
-        <ul class="breadcrumb animate-fade-up delay-1">
+        <p class="contact-hero-copy animate-fade-up delay-1">Tell us what you need. Our team will help you find the right software solution.</p>
+        <ul class="breadcrumb animate-fade-up delay-2">
             <li><a href="{{ route('home') }}">Home</a></li>
             <li>/</li>
             <li class="active">Contact Us</li>
@@ -29,7 +29,7 @@
                     <div class="icon"><i class="fas fa-phone-alt"></i></div>
                     <div class="contact-info-content">
                         <h3>Call us any time!</h3>
-                        <p><a href="tel:+917069300077">+91 7069300077</a></p>
+                        <p><a href="tel:1234567890">1234567890</a></p>
                         <p class="contact-info-note">Mon-Fri, 9:00 AM-6:00 PM</p>
                     </div>
                 </div>
@@ -43,9 +43,9 @@
                     <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
                     <div class="contact-info-content">
                         <h3>Send us e-mail</h3>
-                        <p><a href="mailto:sales@dhronixtech.in">sales@dhronixtech.in</a></p>
-                        <p style="margin-top:4px;"><a
-                                href="mailto:support@dhronixtech.in">support@dhronixtech.in</a></p>
+                        <p><a
+                                href="mailto:info.dhronixbharattechnologies@gmail.com">info.dhronixbharattechnologies@gmail.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
 </section>
 
 <!-- ======================== 3. GOOGLE MAP ======================== -->
-<div class="google-map-wrapper">
+<div class="google-map-wrapper animate-on-scroll">
     <iframe
         src="https://maps.google.com/maps?width=1200&height=450&hl=en&q=Dhronix+Bharat+Technologies,+India&t=&z=12&ie=UTF8&iwloc=B&output=embed"
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
