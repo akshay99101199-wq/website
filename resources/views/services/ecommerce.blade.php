@@ -9,10 +9,13 @@
                 <div class="service-hero-content animate-fade-up">
                     <ul class="breadcrumb-row">
                         <li><a href="{{ route('home') }}">Home</a></li>
+                        <li>/</li>
                         <li><a href="{{ route('services') }}">Solutions</a></li>
+                        <li>/</li>
                         <li>eCommerce</li>
                     </ul>
-                    <div class="hero-icon-badge"><i class="fas fa-shopping-cart"></i></div>
+                    <br/>
+                    <!-- <div class="hero-icon-badge"><i class="fas fa-shopping-cart"></i></div> -->
                     <span class="sub-heading">ECOMMERCE PLATFORM</span>
                     <h1>B2B & B2C <span style="color:var(--secondary-color)">eCommerce</span> Development</h1>
                     <p>Dhronix builds powerful, scalable eCommerce platforms tailored for Indian and international
@@ -33,13 +36,19 @@
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding service-feature-section">
         <div class="container">
             <div class="section-header text-center animate-on-scroll"><span class="sub-heading">KEY FEATURES</span>
                 <h2>Everything to Run a Successful Online Store</h2>
             </div>
-            <div class="features-grid-2">
-                <div class="feature-box animate-on-scroll">
+            <div class="service-feature-explorer">
+                <div class="service-feature-visual">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" alt="eCommerce store dashboard">
+                    <div class="service-feature-visual-caption"><span>ECOMMERCE PLATFORM</span><h3 data-feature-preview-title>Custom Storefront Design</h3><p data-feature-preview-description>Explore the tools to launch and grow your online store.</p><div><i class="fas fa-shield-alt"></i> Built to grow with your business</div></div>
+                </div>
+                <div class="service-feature-list" role="group" aria-label="eCommerce key features">
+                <div class="features-grid-2">
+                <div class="feature-box service-feature-item animate-on-scroll" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-store"></i></div>
                     <div>
                         <h4>Custom Storefront Design</h4>
@@ -47,7 +56,7 @@
                             domain name.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-1">
+                <div class="feature-box service-feature-item animate-on-scroll delay-1" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-credit-card"></i></div>
                     <div>
                         <h4>Payment Gateway Integration</h4>
@@ -55,7 +64,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-2">
+                <div class="feature-box service-feature-item animate-on-scroll delay-2" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-truck"></i></div>
                     <div>
                         <h4>Logistics & Delivery</h4>
@@ -63,7 +72,7 @@
                             management.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-3">
+                <div class="feature-box service-feature-item animate-on-scroll delay-3" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-users-cog"></i></div>
                     <div>
                         <h4>Multi-Vendor Marketplace</h4>
@@ -71,7 +80,7 @@
                             your commission.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll">
+                <div class="feature-box service-feature-item animate-on-scroll" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-bullhorn"></i></div>
                     <div>
                         <h4>Marketing & SEO Tools</h4>
@@ -79,7 +88,7 @@
                             support.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-1">
+                <div class="feature-box service-feature-item animate-on-scroll delay-1" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-chart-line"></i></div>
                     <div>
                         <h4>Analytics & Reporting</h4>
@@ -88,10 +97,12 @@
                     </div>
                 </div>
             </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background:#fafbfc;">
+    <section class="section-padding service-onboarding-section" style="background:#fafbfc;">
         <div class="container side-section">
             <div class="animate-on-scroll">
                 <span class="sub-heading">HOW IT WORKS</span>
@@ -99,10 +110,11 @@
                         Steps</span></h2>
                 <p style="margin-bottom:30px;">We handle everything from design to deployment so you can focus on
                     selling.</p>
-                <div class="steps-list">
+                <div class="steps-list nidhi-onboarding-steps">
                     <div class="step-row">
                         <div class="step-number">01</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP ONE</span>
                             <h4>Requirement & Design</h4>
                             <p>Share your vision. Our UI/UX team designs a stunning, conversion-optimized storefront
                                 tailored to your brand.</p>
@@ -111,6 +123,7 @@
                     <div class="step-row">
                         <div class="step-number">02</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP TWO</span>
                             <h4>Development & Integration</h4>
                             <p>Full-stack development with payment, logistics, and inventory integrations. Product
                                 upload and testing done by us.</p>
@@ -119,6 +132,7 @@
                     <div class="step-row">
                         <div class="step-number">03</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP THREE</span>
                             <h4>Launch & Grow</h4>
                             <p>We launch your store, set up SEO, and hand over with complete admin training. Ongoing
                                 support included.</p>
@@ -126,35 +140,28 @@
                     </div>
                 </div>
             </div>
-            <div class="side-img animate-on-scroll delay-2"><img
+            <!-- <div class="side-img animate-on-scroll delay-2"><img
                     src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
-                    alt="Store Launch"></div>
+                    alt="Store Launch"></div> -->
         </div>
     </section>
+    @include('services.partials.why-choose-us', [
+        'title' => "Why Dhronix for your",
+        'highlight' => "eCommerce Platform",
+        'description' => "We build stores that convert visitors into buyers and buyers into loyal brand advocates.",
+        'image' => "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+        'imageAlt' => "eCommerce platform benefits",
+        'cta' => "Talk to an Expert",
+        'benefits' => [
+            ['icon' => "fas fa-mobile-alt", 'text' => "Mobile-first, lightning-fast performance"],
+            ['icon' => "fas fa-store", 'text' => "White-label ready — your brand, your platform"],
+            ['icon' => "fas fa-users", 'text' => "B2B & B2C both supported"],
+            ['icon' => "fas fa-globe", 'text' => "Multi-language & multi-currency"],
+            ['icon' => "fas fa-shield-alt", 'text' => "99.9% uptime SLA"],
+            ['icon' => "fas fa-tools", 'text' => "Free maintenance for 6 months"],
+        ],
+    ])
 
-    <section class="section-padding">
-        <div class="container side-section">
-            <div class="side-img animate-on-scroll"><img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                    alt="Benefits"></div>
-            <div class="animate-on-scroll delay-1">
-                <span class="sub-heading">WHY CHOOSE US</span>
-                <h2 style="font-size:38px;margin-bottom:15px;">Why Dhronix for your <br><span
-                        class="highlight">eCommerce Platform</span></h2>
-                <p>We build stores that convert visitors into buyers and buyers into loyal brand advocates.</p>
-                <ul class="benefits-list">
-                    <li><i class="fas fa-check-circle"></i> Mobile-first, lightning-fast performance</li>
-                    <li><i class="fas fa-check-circle"></i> White-label ready — your brand, your platform</li>
-                    <li><i class="fas fa-check-circle"></i> B2B & B2C both supported</li>
-                    <li><i class="fas fa-check-circle"></i> Multi-language & multi-currency</li>
-                    <li><i class="fas fa-check-circle"></i> 99.9% uptime SLA</li>
-                    <li><i class="fas fa-check-circle"></i> Free maintenance for 6 months</li>
-                </ul>
-                <a href="{{ route('contact') }}" class="btn btn-primary-solid"><i class="fas fa-phone"
-                        style="margin-right:8px;"></i>Talk to an Expert</a>
-            </div>
-        </div>
-    </section>
 
     <section class="section-padding" style="background:#fafbfc;">
         <div class="container">

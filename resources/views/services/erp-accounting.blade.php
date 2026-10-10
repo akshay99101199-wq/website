@@ -9,10 +9,13 @@
                 <div class="service-hero-content animate-fade-up">
                     <ul class="breadcrumb-row">
                         <li><a href="{{ route('home') }}">Home</a></li>
+                        <li>/</li>
                         <li><a href="{{ route('services') }}">Solutions</a></li>
+                        <li>/</li>
                         <li>ERP Accounting</li>
                     </ul>
-                    <div class="hero-icon-badge"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <br/>
+                    <!-- <div class="hero-icon-badge"><i class="fas fa-file-invoice-dollar"></i></div> -->
                     <span class="sub-heading">ENTERPRISE RESOURCE PLANNING</span>
                     <h1>ERP Accounting <span style="color:var(--secondary-color)">& Business</span> Management</h1>
                     <p>Dhronix ERP is an integrated business management suite covering Accounting, Inventory, Purchase,
@@ -32,13 +35,19 @@
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding service-feature-section">
         <div class="container">
             <div class="section-header text-center animate-on-scroll"><span class="sub-heading">KEY MODULES</span>
                 <h2>Comprehensive ERP Modules for Every Department</h2>
             </div>
-            <div class="features-grid-2">
-                <div class="feature-box animate-on-scroll">
+            <div class="service-feature-explorer">
+                <div class="service-feature-visual">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&amp;w=2072&amp;auto=format&amp;fit=crop" alt="ERP accounting dashboard">
+                    <div class="service-feature-visual-caption"><span>ERP BUSINESS PLATFORM</span><h3 data-feature-preview-title>Accounting &amp; Finance</h3><p data-feature-preview-description>Explore the tools that connect your business operations.</p><div><i class="fas fa-shield-alt"></i> Connected business operations</div></div>
+                </div>
+                <div class="service-feature-list" role="group" aria-label="ERP key modules">
+                <div class="features-grid-2">
+                <div class="feature-box service-feature-item animate-on-scroll" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-calculator"></i></div>
                     <div>
                         <h4>Accounting & Finance</h4>
@@ -46,7 +55,7 @@
                             financial statements.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-1">
+                <div class="feature-box service-feature-item animate-on-scroll delay-1" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-boxes"></i></div>
                     <div>
                         <h4>Inventory Management</h4>
@@ -54,7 +63,7 @@
                             valuation reports.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-2">
+                <div class="feature-box service-feature-item animate-on-scroll delay-2" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-shopping-bag"></i></div>
                     <div>
                         <h4>Purchase & Sales</h4>
@@ -62,7 +71,7 @@
                             tracking.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-3">
+                <div class="feature-box service-feature-item animate-on-scroll delay-3" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-users"></i></div>
                     <div>
                         <h4>HR & Payroll</h4>
@@ -70,7 +79,7 @@
                             compliance.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll">
+                <div class="feature-box service-feature-item animate-on-scroll" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-file-invoice"></i></div>
                     <div>
                         <h4>GST & Tax Compliance</h4>
@@ -78,7 +87,7 @@
                             management.</p>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-1">
+                <div class="feature-box service-feature-item animate-on-scroll delay-1" role="button" tabindex="0">
                     <div class="f-icon"><i class="fas fa-tachometer-alt"></i></div>
                     <div>
                         <h4>MIS & Business Reports</h4>
@@ -87,10 +96,12 @@
                     </div>
                 </div>
             </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background:#fafbfc;">
+    <section class="section-padding service-onboarding-section" style="background:#fafbfc;">
         <div class="container side-section">
             <div class="animate-on-scroll">
                 <span class="sub-heading">HOW IT WORKS</span>
@@ -98,10 +109,11 @@
                         in Days</span></h2>
                 <p style="margin-bottom:30px;">Our implementation team ensures a smooth transition from your current
                     system with zero data loss.</p>
-                <div class="steps-list">
+                <div class="steps-list nidhi-onboarding-steps">
                     <div class="step-row">
                         <div class="step-number">01</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP ONE</span>
                             <h4>Business Analysis</h4>
                             <p>Our consultants study your current processes and configure the ERP to match your exact
                                 business workflows.</p>
@@ -110,6 +122,7 @@
                     <div class="step-row">
                         <div class="step-number">02</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP TWO</span>
                             <h4>Data Migration & Setup</h4>
                             <p>Import existing data from Tally, Excel, or any format. Configure chart of accounts, tax
                                 codes, and user roles.</p>
@@ -118,6 +131,7 @@
                     <div class="step-row">
                         <div class="step-number">03</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP THREE</span>
                             <h4>Training & Go Live</h4>
                             <p>Full team training sessions, user manuals, and a dedicated account manager to ensure a
                                 smooth go-live.</p>
@@ -125,35 +139,28 @@
                     </div>
                 </div>
             </div>
-            <div class="side-img animate-on-scroll delay-2"><img
+            <!-- <div class="side-img animate-on-scroll delay-2"><img
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-                    alt="ERP Process"></div>
+                    alt="ERP Process"></div> -->
         </div>
     </section>
+    @include('services.partials.why-choose-us', [
+        'title' => "Why Dhronix ERP is",
+        'highlight' => "Best for Your Business",
+        'description' => "Trusted by manufacturers, traders, service companies, and retail chains across India.",
+        'image' => "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+        'imageAlt' => "ERP accounting benefits",
+        'cta' => "Talk to an Expert",
+        'benefits' => [
+            ['icon' => "fas fa-file-invoice", 'text' => "Replaces Tally, Busy & manual Excel sheets"],
+            ['icon' => "fas fa-receipt", 'text' => "100% GST & Indian tax compliant"],
+            ['icon' => "fas fa-laptop", 'text' => "Works on Web, Android & iOS"],
+            ['icon' => "fas fa-code-branch", 'text' => "Multi-company, multi-branch support"],
+            ['icon' => "fas fa-cogs", 'text' => "Customizable to any industry vertical"],
+            ['icon' => "fas fa-sync-alt", 'text' => "Lifetime updates & 24/7 support"],
+        ],
+    ])
 
-    <section class="section-padding">
-        <div class="container side-section">
-            <div class="side-img animate-on-scroll"><img
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-                    alt="Benefits"></div>
-            <div class="animate-on-scroll delay-1">
-                <span class="sub-heading">WHY CHOOSE US</span>
-                <h2 style="font-size:38px;margin-bottom:15px;">Why Dhronix ERP is <br><span class="highlight">Best for
-                        Your Business</span></h2>
-                <p>Trusted by manufacturers, traders, service companies, and retail chains across India.</p>
-                <ul class="benefits-list">
-                    <li><i class="fas fa-check-circle"></i> Replaces Tally, Busy & manual Excel sheets</li>
-                    <li><i class="fas fa-check-circle"></i> 100% GST & Indian tax compliant</li>
-                    <li><i class="fas fa-check-circle"></i> Works on Web, Android & iOS</li>
-                    <li><i class="fas fa-check-circle"></i> Multi-company, multi-branch support</li>
-                    <li><i class="fas fa-check-circle"></i> Customizable to any industry vertical</li>
-                    <li><i class="fas fa-check-circle"></i> Lifetime updates & 24/7 support</li>
-                </ul>
-                <a href="{{ route('contact') }}" class="btn btn-primary-solid"><i class="fas fa-phone"
-                        style="margin-right:8px;"></i>Talk to an Expert</a>
-            </div>
-        </div>
-    </section>
 
     <section class="section-padding" style="background:#fafbfc;">
         <div class="container">

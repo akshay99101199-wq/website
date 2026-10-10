@@ -93,6 +93,50 @@
 
     <script src="{{ asset('assets/js/script.js') }}"></script>
     <script src="{{ asset('assets/js/carousel.js') }}"></script>
+    <script>
+        document.querySelectorAll('.service-feature-explorer').forEach((explorer) => {
+            const items = explorer.querySelectorAll('.service-feature-item');
+            const preview = explorer.querySelector('.service-feature-visual');
+            const previewImage = preview.querySelector('img');
+            const previewTitle = preview.querySelector('[data-feature-preview-title]');
+            const previewDescription = preview.querySelector('[data-feature-preview-description]');
+            let previewUpdateTimer;
+
+            const activateFeature = (item) => {
+                items.forEach((feature) => {
+                    const isActive = feature === item;
+                    feature.classList.toggle('is-active', isActive);
+                    feature.setAttribute('aria-expanded', String(isActive));
+                });
+
+                preview.classList.add('is-changing');
+                window.clearTimeout(previewUpdateTimer);
+                previewUpdateTimer = window.setTimeout(() => {
+                    if (item.dataset.featureImage) {
+                        previewImage.src = item.dataset.featureImage;
+                        previewImage.alt = item.dataset.featureImageAlt || item.querySelector('h4').textContent;
+                    }
+                    previewTitle.textContent = item.querySelector('h4').textContent;
+                    previewDescription.textContent = item.querySelector('p').textContent;
+                    preview.classList.remove('is-changing');
+                }, 140);
+            };
+
+            items.forEach((item) => {
+                item.setAttribute('aria-expanded', 'false');
+                item.addEventListener('click', () => activateFeature(item));
+                item.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        activateFeature(item);
+                    }
+                });
+
+            });
+
+            if (items.length) activateFeature(items[0]);
+        });
+    </script>
 </body>
 
 </html>

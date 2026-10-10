@@ -3,16 +3,20 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/service-detail.css') }}">
 <main class="service-detail service-detail--nbfc-software">
-<section class="service-page-hero service-page-hero--nbfc-software">
+    <section class="service-page-hero service-page-hero--nbfc-software">
         <div class="container">
             <div class="service-hero-inner">
                 <div class="service-hero-content animate-fade-up">
                     <ul class="breadcrumb-row">
                         <li><a href="{{ route('home') }}">Home</a></li>
+                        <li>/</li>
                         <li><a href="{{ route('services') }}">Solutions</a></li>
+                        <li>/</li>
                         <li>NBFC Software</li>
+                        
                     </ul>
-                    <div class="hero-icon-badge"><i class="fas fa-university"></i></div>
+                    <br/>
+                    <!-- <div class="hero-icon-badge"><i class="fas fa-university"></i></div> -->
                     <span class="sub-heading">FINANCIAL SOFTWARE</span>
                     <h1>NBFC Software <span style="color:var(--secondary-color)">Loan Management</span> System</h1>
                     <p>Dhronix NBFC Software is an end-to-end digital platform for Non-Banking Financial Companies.
@@ -34,65 +38,77 @@
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding service-feature-section">
         <div class="container">
             <div class="section-header text-center animate-on-scroll"><span class="sub-heading">KEY FEATURES</span>
                 <h2>Complete NBFC Operations in One Platform</h2>
             </div>
-            <div class="features-grid-2">
-                <div class="feature-box animate-on-scroll">
-                    <div class="f-icon"><i class="fas fa-file-contract"></i></div>
-                    <div>
-                        <h4>Loan Origination System</h4>
-                        <p>Digital loan applications with document upload, credit scoring, auto-approval workflows, and
-                            sanction letter generation.</p>
+            <div class="service-feature-explorer">
+                <div class="service-feature-visual">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" alt="NBFC loan management dashboard">
+                    <div class="service-feature-visual-caption"><span>NBFC MANAGEMENT PLATFORM</span>
+                        <h3 data-feature-preview-title>Loan Origination System</h3>
+                        <p data-feature-preview-description>Explore the tools that power your NBFC operations.</p>
+                        <div><i class="fas fa-shield-alt"></i> Secure financial operations</div>
                     </div>
                 </div>
-                <div class="feature-box animate-on-scroll delay-1">
-                    <div class="f-icon"><i class="fas fa-calendar-check"></i></div>
-                    <div>
-                        <h4>EMI & Repayment Tracking</h4>
-                        <p>Automated EMI schedules, overdue tracking, penalty calculations, and customer payment
-                            reminders via SMS/WhatsApp.</p>
-                    </div>
-                </div>
-                <div class="feature-box animate-on-scroll delay-2">
-                    <div class="f-icon"><i class="fas fa-search-dollar"></i></div>
-                    <div>
-                        <h4>Credit Bureau Integration</h4>
-                        <p>Real-time CIBIL, Equifax, and Experian credit score checks integrated directly in the loan
-                            approval workflow.</p>
-                    </div>
-                </div>
-                <div class="feature-box animate-on-scroll delay-3">
-                    <div class="f-icon"><i class="fas fa-balance-scale"></i></div>
-                    <div>
-                        <h4>RBI Compliance & Reporting</h4>
-                        <p>Automated RBI returns, CERSAI integration, and statutory reports. Stay audit-ready with zero
-                            manual effort.</p>
-                    </div>
-                </div>
-                <div class="feature-box animate-on-scroll">
-                    <div class="f-icon"><i class="fas fa-coins"></i></div>
-                    <div>
-                        <h4>Disbursement Management</h4>
-                        <p>Direct bank transfers, cheque disbursals, and integration with payment gateways for seamless
-                            fund release.</p>
-                    </div>
-                </div>
-                <div class="feature-box animate-on-scroll delay-1">
-                    <div class="f-icon"><i class="fas fa-chart-pie"></i></div>
-                    <div>
-                        <h4>NPA & Portfolio Management</h4>
-                        <p>Track your NPA portfolio in real-time with recovery dashboards, legal notices, and write-off
-                            management tools.</p>
+                <div class="service-feature-list" role="group" aria-label="NBFC key features">
+                    <div class="features-grid-2">
+                        <div class="feature-box service-feature-item animate-on-scroll" role="button" tabindex="0">
+                            <div class="f-icon"><i class="fas fa-file-contract"></i></div>
+                            <div>
+                                <h4>Loan Origination System</h4>
+                                <p>Digital loan applications with document upload, credit scoring, auto-approval workflows, and
+                                    sanction letter generation.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box service-feature-item animate-on-scroll delay-1" role="button" tabindex="0">
+                            <div class="f-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div>
+                                <h4>EMI & Repayment Tracking</h4>
+                                <p>Automated EMI schedules, overdue tracking, penalty calculations, and customer payment
+                                    reminders via SMS/WhatsApp.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box service-feature-item animate-on-scroll delay-2" role="button" tabindex="0">
+                            <div class="f-icon"><i class="fas fa-search-dollar"></i></div>
+                            <div>
+                                <h4>Credit Bureau Integration</h4>
+                                <p>Real-time CIBIL, Equifax, and Experian credit score checks integrated directly in the loan
+                                    approval workflow.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box service-feature-item animate-on-scroll delay-3" role="button" tabindex="0">
+                            <div class="f-icon"><i class="fas fa-balance-scale"></i></div>
+                            <div>
+                                <h4>RBI Compliance & Reporting</h4>
+                                <p>Automated RBI returns, CERSAI integration, and statutory reports. Stay audit-ready with zero
+                                    manual effort.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box service-feature-item animate-on-scroll" role="button" tabindex="0">
+                            <div class="f-icon"><i class="fas fa-coins"></i></div>
+                            <div>
+                                <h4>Disbursement Management</h4>
+                                <p>Direct bank transfers, cheque disbursals, and integration with payment gateways for seamless
+                                    fund release.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box service-feature-item animate-on-scroll delay-1" role="button" tabindex="0">
+                            <div class="f-icon"><i class="fas fa-chart-pie"></i></div>
+                            <div>
+                                <h4>NPA & Portfolio Management</h4>
+                                <p>Track your NPA portfolio in real-time with recovery dashboards, legal notices, and write-off
+                                    management tools.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background:#fafbfc;">
+    <section class="section-padding service-onboarding-section" style="background:#fafbfc;">
         <div class="container side-section">
             <div class="animate-on-scroll">
                 <span class="sub-heading">HOW IT WORKS</span>
@@ -100,10 +116,11 @@
                         Flow</span></h2>
                 <p style="margin-bottom:30px;">From application to disbursement, everything happens digitally and in
                     record time.</p>
-                <div class="steps-list">
+                <div class="steps-list nidhi-onboarding-steps">
                     <div class="step-row">
                         <div class="step-number">01</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP ONE</span>
                             <h4>Application & KYC</h4>
                             <p>Borrower submits online application with Aadhaar/PAN eKYC verification completed within
                                 minutes.</p>
@@ -112,6 +129,7 @@
                     <div class="step-row">
                         <div class="step-number">02</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP TWO</span>
                             <h4>Credit Assessment</h4>
                             <p>Automated credit score check, income verification, and risk scoring determines loan
                                 eligibility instantly.</p>
@@ -120,6 +138,7 @@
                     <div class="step-row">
                         <div class="step-number">03</div>
                         <div class="step-content">
+                            <span class="nidhi-step-label">STEP THREE</span>
                             <h4>Disbursal & Tracking</h4>
                             <p>Approved loans are disbursed directly to accounts. EMI tracking and collection automation
                                 begins immediately.</p>
@@ -127,36 +146,28 @@
                     </div>
                 </div>
             </div>
-            <div class="side-img animate-on-scroll delay-2"><img
+            <!-- <div class="side-img animate-on-scroll delay-2"><img
                     src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop"
-                    alt="Loan Process"></div>
+                    alt="Loan Process"></div> -->
         </div>
     </section>
+    @include('services.partials.why-choose-us', [
+    'title' => "Benefits of Dhronix",
+    'highlight' => "NBFC Software",
+    'description' => "Designed specifically for Indian NBFCs, our platform handles everything from micro-loans to large corporate credit.",
+    'image' => "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+    'imageAlt' => "NBFC software benefits",
+    'cta' => "Talk to an Expert",
+    'benefits' => [
+    ['icon' => "fas fa-balance-scale", 'text' => "RBI & CERSAI ready compliance module"],
+    ['icon' => "fas fa-hand-holding-usd", 'text' => "Supports all loan types: Personal, Home, Vehicle, MSME"],
+    ['icon' => "fas fa-cloud", 'text' => "Cloud-based — access from anywhere"],
+    ['icon' => "fas fa-plug", 'text' => "API integration with banks & payment gateways"],
+    ['icon' => "fas fa-chart-line", 'text' => "Scalable for 1000+ daily loan applications"],
+    ['icon' => "fas fa-headset", 'text' => "Dedicated onboarding & 24/7 support"],
+    ],
+    ])
 
-    <section class="section-padding">
-        <div class="container side-section">
-            <div class="side-img animate-on-scroll"><img
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
-                    alt="Benefits"></div>
-            <div class="animate-on-scroll delay-1">
-                <span class="sub-heading">WHY CHOOSE US</span>
-                <h2 style="font-size:38px;margin-bottom:15px;">Benefits of Dhronix <br><span class="highlight">NBFC
-                        Software</span></h2>
-                <p>Designed specifically for Indian NBFCs, our platform handles everything from micro-loans to large
-                    corporate credit.</p>
-                <ul class="benefits-list">
-                    <li><i class="fas fa-check-circle"></i> RBI & CERSAI ready compliance module</li>
-                    <li><i class="fas fa-check-circle"></i> Supports all loan types: Personal, Home, Vehicle, MSME</li>
-                    <li><i class="fas fa-check-circle"></i> Cloud-based — access from anywhere</li>
-                    <li><i class="fas fa-check-circle"></i> API integration with banks & payment gateways</li>
-                    <li><i class="fas fa-check-circle"></i> Scalable for 1000+ daily loan applications</li>
-                    <li><i class="fas fa-check-circle"></i> Dedicated onboarding & 24/7 support</li>
-                </ul>
-                <a href="{{ route('contact') }}" class="btn btn-primary-solid"><i class="fas fa-phone"
-                        style="margin-right:8px;"></i>Talk to an Expert</a>
-            </div>
-        </div>
-    </section>
 
     <section class="section-padding" style="background:#fafbfc;">
         <div class="container">
@@ -170,7 +181,7 @@
         </div>
     </section>
 
-  <!-- ======================== FOOTER ======================== -->
-    
+    <!-- ======================== FOOTER ======================== -->
+
 </main>
 @endsection

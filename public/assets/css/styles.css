@@ -49,6 +49,16 @@ h6 {
     color: var(--primary-dark);
 }
 
+body h2 {
+    font-size: clamp(28px, 3vw, 36px) !important;
+    line-height: 1.25;
+}
+
+body p {
+    font-size: 15px !important;
+    line-height: 1.7;
+}
+
 .text-white {
     color: var(--white) !important;
 }
@@ -981,5 +991,3 @@ h6 {
       display: inline-block;
 
     }
-
-
