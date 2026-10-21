@@ -29,59 +29,108 @@
             <p>Choose a focused solution or bring your operations together with one technology partner.</p>
         </div>
         <div class="service-grid">
-            <div class="service-item animate-on-scroll">
-                <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
-                <span class="service-index">01 <i></i> FINANCE</span>
-                <h3>Nidhi Software</h3>
-                <p>Introducing Nidhi Software by Dhronix Tech - a seamless and secure way to manage your company's
-                    daily operations, member accounts, and loans. Experience hassle-free transactions and automated
-                    workflows.</p>
-                <a href="{{ route('nidhi-software') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-item animate-on-scroll delay-1">
-                <div class="icon-box"><i class="fas fa-university"></i></div>
-                <span class="service-index">02 <i></i> LENDING</span>
-                <h3>NBFC Software</h3>
-                <p>Introducing NBFC Solutions by Dhronix Tech - your one-stop platform for hassle-free loan
-                    management, EMI collections, and accounting. Enjoy the convenience of managing everything
-                    securely.</p>
-                <a href="{{ route('nbfc-software') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-item animate-on-scroll delay-2">
-                <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
-                <span class="service-index">03 <i></i> OPERATIONS</span>
-                <h3>ERP Accounting</h3>
-                <p>Introducing robust ERP Accounting - the simplest and secure way to manage your enterprise
-                    finances, inventory, and billing. Say goodbye to manual ledgers and enjoy the convenience of
-                    automation.</p>
-                <a href="{{ route('erp-accounting') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-item animate-on-scroll">
-                <div class="icon-box"><i class="fas fa-shopping-cart"></i></div>
-                <span class="service-index">04 <i></i> COMMERCE</span>
-                <h3>eCommerce App</h3>
-                <p>Introducing robust eCommerce platform development - the fastest way to sell locally and
-                    internationally. Experience seamless B2B & B2C transactions with our customized storefront
-                    solutions.</p>
-                <a href="{{ route('ecommerce') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-item animate-on-scroll delay-1">
-                <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
-                <span class="service-index">05 <i></i> MOBILE</span>
-                <h3>Mobile Apps</h3>
-                <p>Introducing custom Native Mobile Apps - the easiest way to reach your customers on Android and
-                    iOS. Enjoy seamless user experiences with our high-performance, flawlessly designed mobile
-                    applications.</p>
-                <a href="{{ route('mobile-apps') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-item animate-on-scroll delay-2">
-                <div class="icon-box"><i class="fas fa-cloud"></i></div>
-                <span class="service-index">06 <i></i> CLOUD</span>
-                <h3>Cloud Hosting</h3>
-                <p>Introducing Enterprise Cloud Hosting - a hassle-free and secure way to deploy your applications
-                    with 99.99% uptime. Experience the ease of scaling your digital infrastructure on demand.</p>
-                <a href="{{ route('cloud-hosting') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
+            <article class="service-item animate-on-scroll" tabindex="0" aria-label="Nidhi Software features">
+                <div class="service-card-inner">
+                    <div class="service-card-face service-card-front">
+                        <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                        <span class="service-index">01 <i></i> FINANCE</span>
+                        <h3>Nidhi Software</h3>
+                        <p>Manage member accounts, daily operations, and loans with secure, automated workflows.</p>
+                        <span class="service-flip-hint">Hover to explore features <i class="fas fa-rotate"></i></span>
+                    </div>
+                    <div class="service-card-face service-card-back">
+                        <span class="service-index">01 <i></i> KEY FEATURES</span>
+                        <h3>Nidhi Software</h3>
+                        <ul><li>Member and account management</li><li>Savings and deposit tracking</li><li>Loan and repayment workflows</li><li>Automated reports and transactions</li></ul>
+                        <a href="{{ route('nidhi-software') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="service-item animate-on-scroll delay-1" tabindex="0" aria-label="NBFC Software features">
+                <div class="service-card-inner">
+                    <div class="service-card-face service-card-front">
+                        <div class="icon-box"><i class="fas fa-university"></i></div>
+                        <span class="service-index">02 <i></i> LENDING</span>
+                        <h3>NBFC Software</h3>
+                        <p>Manage loan operations, EMI collections, and accounting with a secure lending platform.</p>
+                        <span class="service-flip-hint">Hover to explore features <i class="fas fa-rotate"></i></span>
+                    </div>
+                    <div class="service-card-face service-card-back">
+                        <span class="service-index">02 <i></i> KEY FEATURES</span>
+                        <h3>NBFC Software</h3>
+                        <ul><li>Loan and customer management</li><li>EMI schedules and collections</li><li>Payment and account tracking</li><li>Operational reports and insights</li></ul>
+                        <a href="{{ route('nbfc-software') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="service-item animate-on-scroll delay-2" tabindex="0" aria-label="ERP Accounting features">
+                <div class="service-card-inner">
+                    <div class="service-card-face service-card-front">
+                        <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <span class="service-index">03 <i></i> OPERATIONS</span>
+                        <h3>ERP Accounting</h3>
+                        <p>Bring finances, inventory, and billing together with a connected business system.</p>
+                        <span class="service-flip-hint">Hover to explore features <i class="fas fa-rotate"></i></span>
+                    </div>
+                    <div class="service-card-face service-card-back">
+                        <span class="service-index">03 <i></i> KEY FEATURES</span>
+                        <h3>ERP Accounting</h3>
+                        <ul><li>Accounting and financial records</li><li>Inventory and stock management</li><li>Billing and invoice workflows</li><li>Centralized business reporting</li></ul>
+                        <a href="{{ route('erp-accounting') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="service-item animate-on-scroll" tabindex="0" aria-label="eCommerce App features">
+                <div class="service-card-inner">
+                    <div class="service-card-face service-card-front">
+                        <div class="icon-box"><i class="fas fa-shopping-cart"></i></div>
+                        <span class="service-index">04 <i></i> COMMERCE</span>
+                        <h3>eCommerce App</h3>
+                        <p>Grow online sales with a tailored storefront for smooth B2B and B2C shopping.</p>
+                        <span class="service-flip-hint">Hover to explore features <i class="fas fa-rotate"></i></span>
+                    </div>
+                    <div class="service-card-face service-card-back">
+                        <span class="service-index">04 <i></i> KEY FEATURES</span>
+                        <h3>eCommerce App</h3>
+                        <ul><li>Custom B2B and B2C storefronts</li><li>Product catalog and order management</li><li>Secure checkout integrations</li><li>Responsive shopping experiences</li></ul>
+                        <a href="{{ route('ecommerce') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="service-item animate-on-scroll delay-1" tabindex="0" aria-label="Mobile Apps features">
+                <div class="service-card-inner">
+                    <div class="service-card-face service-card-front">
+                        <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                        <span class="service-index">05 <i></i> MOBILE</span>
+                        <h3>Mobile Apps</h3>
+                        <p>Connect with customers through thoughtfully designed apps for Android and iOS.</p>
+                        <span class="service-flip-hint">Hover to explore features <i class="fas fa-rotate"></i></span>
+                    </div>
+                    <div class="service-card-face service-card-back">
+                        <span class="service-index">05 <i></i> KEY FEATURES</span>
+                        <h3>Mobile Apps</h3>
+                        <ul><li>Android and iOS app development</li><li>Intuitive, responsive interfaces</li><li>Secure API and platform integrations</li><li>Push notifications and engagement</li></ul>
+                        <a href="{{ route('mobile-apps') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            <article class="service-item animate-on-scroll delay-2" tabindex="0" aria-label="Cloud Hosting features">
+                <div class="service-card-inner">
+                    <div class="service-card-face service-card-front">
+                        <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                        <span class="service-index">06 <i></i> CLOUD</span>
+                        <h3>Cloud Hosting</h3>
+                        <p>Deploy applications on secure, scalable cloud infrastructure built for your needs.</p>
+                        <span class="service-flip-hint">Hover to explore features <i class="fas fa-rotate"></i></span>
+                    </div>
+                    <div class="service-card-face service-card-back">
+                        <span class="service-index">06 <i></i> KEY FEATURES</span>
+                        <h3>Cloud Hosting</h3>
+                        <ul><li>Secure application deployment</li><li>Scalable cloud infrastructure</li><li>Backups and uptime monitoring</li><li>Managed hosting and support</li></ul>
+                        <a href="{{ route('cloud-hosting') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
 </section>
