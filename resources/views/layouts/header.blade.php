@@ -63,7 +63,7 @@
                               style="margin-right:8px; color:var(--secondary-color)"></i>Contact Us</a></li>
                   <li><a href="{{ route('portfolio') }}"><i class="fas fa-trophy"
                               style="margin-right:8px; color:var(--secondary-color)"></i>Portfolio</a></li>
-                  <li><a href="#"><i class="fas fa-fle"
+                  <li><a href="#"><i class="fas fa-file"
                               style="margin-right:8px; color:var(--secondary-color)"></i>Blog</a></li>
               </ul>
               <div class="nav-right">
