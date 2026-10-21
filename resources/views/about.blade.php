@@ -109,7 +109,12 @@
 </section>
 
 <!-- 3. Our Feature Section -->
-<section class="section-padding dark-section feature-sections">
+
+<section class="section-padding dark-section feature-sections solutions dark-section-services">
+    <video class="solutions-video" autoplay muted loop playsinline>
+        <!-- <source src="https://ik.imagekit.io/skxiwi7ro/DBT_Media/services.mp4" type="video/mp4"> -->
+        <source src="https://ik.imagekit.io/skxiwi7ro/DBT_Media/service.mp4" type="video/mp4">
+    </video>
     <div class="container">
         <div class="about-section-heading animate-on-scroll">
             <div>

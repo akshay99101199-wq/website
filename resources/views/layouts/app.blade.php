@@ -50,9 +50,9 @@
         </a>
         <a class="sticky-contact-link sticky-contact-email"
             href="mailto:info.dhronixbharattechnologies@gmail.com"
-            aria-label="Email info.dhronixbharattechnologies@gmail.com">
+            aria-label="Email info.dhronixtech@gmail.com">
             <i class="fas fa-envelope" aria-hidden="true"></i>
-            <span>Email us</span>
+            <span>info.dhronixtech@gmail.com</span>
         </a>
         <a class="sticky-contact-link sticky-contact-whatsapp" href="https://wa.me/1234567890"
             target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">

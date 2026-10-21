@@ -259,10 +259,12 @@ body p {
 .sticky-contact {
     position: fixed;
     top: 60%;
-    left: 0;
+    right: 0;
     z-index: 1100;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
     transform: translateY(-50%);
 }
 
@@ -272,57 +274,147 @@ body p {
     flex-direction: row-reverse;
     justify-content: flex-start;
     gap: 12px;
-    width: 48px;
-    min-height: 46px;
+    box-sizing: border-box;
+    width: max-content;
+    max-width: calc(100vw - 20px);
+    min-height: 52px;
     overflow: hidden;
     padding: 0 15px;
     color: var(--white);
     text-decoration: none;
-    transition: width .25s ease, filter .2s ease;
+    border-radius: 16px 0 0 16px;
+    box-shadow: 0 8px 24px rgba(22, 27, 45, .22);
+    transition: transform .24s ease, filter .2s ease, box-shadow .2s ease;
 }
 
 .sticky-contact-link:hover,
 .sticky-contact-link:focus-visible {
-    width: 190px;
     color: var(--white);
     filter: brightness(1.08);
+    transform: translateX(-4px);
+    box-shadow: 0 10px 28px rgba(22, 27, 45, .3);
+    z-index: 1;
+}
+
+.sticky-contact-link:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: -4px;
 }
 
 .sticky-contact-link i {
     flex: 0 0 18px;
     width: 18px;
+    font-size: 17px;
     text-align: center;
+    transform-origin: center;
+    animation: sticky-icon-idle 2.8s ease-in-out infinite;
+}
+
+.sticky-contact-phone i {
+    animation-delay: 0s;
+}
+
+.sticky-contact-email i {
+    animation-delay: .7s;
+}
+
+.sticky-contact-whatsapp i {
+    animation-delay: 1.4s;
+}
+
+.sticky-contact-location i {
+    animation-delay: 2.1s;
+}
+
+@keyframes sticky-icon-idle {
+    0%, 72%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: .62;
+        transform: scale(.92);
+    }
+
+    88% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+.sticky-contact-phone:hover i,
+.sticky-contact-phone:focus-visible i {
+    animation: sticky-phone-ring .7s ease-in-out;
+}
+
+.sticky-contact-email:hover i,
+.sticky-contact-email:focus-visible i {
+    animation: sticky-email-send .55s ease-in-out;
+}
+
+.sticky-contact-whatsapp:hover i,
+.sticky-contact-whatsapp:focus-visible i {
+    animation: sticky-whatsapp-pop .6s ease-in-out;
+}
+
+.sticky-contact-location:hover i,
+.sticky-contact-location:focus-visible i {
+    animation: sticky-location-drop .55s ease-in-out;
+}
+
+@keyframes sticky-phone-ring {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(-14deg); }
+    40%, 80% { transform: rotate(14deg); }
+}
+
+@keyframes sticky-email-send {
+    50% { transform: translate(2px, -3px) rotate(8deg); }
+}
+
+@keyframes sticky-whatsapp-pop {
+    50% { transform: scale(1.22) rotate(-8deg); }
+}
+
+@keyframes sticky-location-drop {
+    35% { transform: translateY(-4px); }
+    65% { transform: translateY(1px); }
 }
 
 .sticky-contact-link span {
+    flex: 0 1 auto;
+    max-width: 0;
+    overflow: hidden;
     font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .2s ease;
+    transition: max-width .3s cubic-bezier(.2, .8, .2, 1), opacity .2s ease;
 }
 
 .sticky-contact-link:hover span,
 .sticky-contact-link:focus-visible span {
+    max-width: calc(100vw - 90px);
     visibility: visible;
     opacity: 1;
 }
 
 .sticky-contact-phone {
-    background: #405de6;
+    background: linear-gradient(135deg, #536dfe, #3348c8);
 }
 
 .sticky-contact-email {
-    background: #5631a8;
+    background: linear-gradient(135deg, #8455d8, #5432a4);
 }
 
 .sticky-contact-whatsapp {
-    background: #08b887;
+    background: linear-gradient(135deg, #20c978, #078b59);
 }
 
 .sticky-contact-location {
-    background: #f3217f;
+    background: linear-gradient(135deg, #ff568a, #d51d67);
 }
 
 .header.scrolled {
@@ -1081,14 +1173,8 @@ body p {
 @media (max-width: 768px) {
 
     .sticky-contact-link {
-        width: 44px;
-        min-height: 44px;
-        padding: 0 13px;
-    }
-
-    .sticky-contact-link:hover,
-    .sticky-contact-link:focus-visible {
-        width: 170px;
+        min-height: 48px;
+        padding: 0 15px;
     }
 
     .nav-links,
@@ -1126,6 +1212,18 @@ body p {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
+    }
+
+    .sticky-contact-link {
+        transition: none;
+    }
+
+    .sticky-contact-link span {
+        transition: none;
+    }
+
+    .sticky-contact-link i {
+        animation: none !important;
     }
 
     .news-ticker-track {
