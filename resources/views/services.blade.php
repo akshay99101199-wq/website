@@ -4,18 +4,20 @@
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 
 <!-- Page Header -->
-<header class="page-header services-page-header">
+ <div class="page-header">
     <div class="container">
-        <span class="sub-heading animate-fade-up">OUR SERVICES</span>
-        <h1 class="animate-fade-up delay-1">Software for <span>every stage.</span></h1>
-        <p class="services-hero-copy animate-fade-up delay-2">Secure software and technology solutions built around the way your business works.</p>
+        <h1 class="animate-fade-up">Our <span style="color: var(--secondary-color);">Services</span></h1>
+        <h5 class="text-silver mt-3 animate-fade-up delay-1">Software for <span>every stage.</span></h5>
+        <p class="text-silver mt-3 animate-fade-up delay-2">Secure software and technology solutions built <br/>around the way your business works.
+        </p>
+
         <ul class="breadcrumb animate-fade-up delay-3">
-            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('home') }}"> Home</a></li>
             <li>/</li>
-            <li class="active">Our Services</li>
+            <li class="active">Services</li>
         </ul>
     </div>
-</header>
+</div>
 
 <main class="services-page">
 <!-- 1. Page Services Section -->

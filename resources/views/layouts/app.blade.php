@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title','Default')</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.png') }}">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -30,9 +31,41 @@
         <div class="loader-pulse"></div>
     </div>
 
+    <div class="news-ticker" role="region" aria-label="Company updates">
+        <span class="news-ticker-label"><i class="fas fa-bullhorn" aria-hidden="true"></i> NEWS</span>
+        <div class="news-ticker-track">
+            <span>Build smarter with secure software, fintech and digital solutions from Dhronix Bharat Technologies.</span>
+            <span aria-hidden="true">Build smarter with secure software, fintech and digital solutions from Dhronix Bharat Technologies.</span>
+        </div>
+    </div>
+
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
+
+    <nav class="sticky-contact" aria-label="Quick contact">
+        <a class="sticky-contact-link sticky-contact-phone" href="tel:1234567890" aria-label="Call 1234567890">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+            <span>1234567890</span>
+        </a>
+        <a class="sticky-contact-link sticky-contact-email"
+            href="mailto:info.dhronixbharattechnologies@gmail.com"
+            aria-label="Email info.dhronixbharattechnologies@gmail.com">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Email us</span>
+        </a>
+        <a class="sticky-contact-link sticky-contact-whatsapp" href="https://wa.me/1234567890"
+            target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a class="sticky-contact-link sticky-contact-location"
+            href="https://maps.google.com/?q=Dhronix+Bharat+Technologies,+India"
+            target="_blank" rel="noopener noreferrer" aria-label="Find Dhronix Bharat Technologies on Google Maps">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <span>Location</span>
+        </a>
+    </nav>
 
 
 

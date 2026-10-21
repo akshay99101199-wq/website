@@ -4,12 +4,16 @@
 <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 
 <!-- ======================== PAGE HEADER ======================== -->
-<div class="page-header contact-page-header">
+
+<div class="page-header">
     <div class="container">
-        <h1 class="animate-fade-up">Let's talk <span>business.</span></h1>
-        <p class="contact-hero-copy animate-fade-up delay-1">Tell us what you need. Our team will help you find the right software solution.</p>
-        <ul class="breadcrumb animate-fade-up delay-2">
-            <li><a href="{{ route('home') }}">Home</a></li>
+        <h1 class="animate-fade-up">Contact <span style="color: var(--secondary-color);">Us</span></h1>
+        <h5 class="text-silver mt-3 animate-fade-up delay-1">Let's talk <span>business.</h5>
+        <p class="text-silver mt-3 animate-fade-up delay-2">Tell us what you need. Our team will help you<br/> find the right software solution.
+        </p>
+
+        <ul class="breadcrumb animate-fade-up delay-3">
+            <li><a href="{{ route('home') }}"> Home</a></li>
             <li>/</li>
             <li class="active">Contact Us</li>
         </ul>
@@ -44,7 +48,7 @@
                     <div class="contact-info-content">
                         <h3>Send us e-mail</h3>
                         <p><a
-                                href="mailto:info.dhronixbharattechnologies@gmail.com">info.dhronixbharattechnologies@gmail.com</a>
+                                href="mailto:info.dhronixtech@gmail.com">info.dhronixtech@gmail.com</a>
                         </p>
                     </div>
                 </div>
@@ -73,7 +77,7 @@
 
         <!-- Left: Image -->
         <div class="contact-form-img animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?q=80&w=2070&auto=format&fit=crop"
+            <img src="{{ asset('assets/contact.png') }}"
                 alt="Contact Dhronix Tech">
             <div class="contact-image-caption">
                 <span>YOUR NEXT STEP</span>
