@@ -388,86 +388,129 @@
 
     <!-- 5. Features Section (Everything you need in one solution) -->
     <section class="features-section section-padding">
-        <div class="container features-container">
-            <div class="features-content animate-on-scroll">
+        <div class="container">
+            <div class="features-intro animate-on-scroll">
                 <span class="section-label">WHY CHOOSE US</span>
-                <h2>All You Need One Solution</h2>
-                <p>E-commerce software platform that gives you full control over brand, operations, pricing,
-                    analytics, marketing, and more.</p>
+                <h2>Technology shaped around your business</h2>
+                <p>Explore secure, practical software solutions that simplify operations and help your business grow.</p>
+            </div>
 
-                <div class="dhronix-howwork-area">
+            <div class="why-service-tabs animate-on-scroll" data-service-tabs>
+                <div class="why-service-tab-list" role="tablist" aria-label="Our software services"
+                    aria-orientation="vertical">
+                    <button class="why-service-tab is-active" id="service-tab-nidhi" type="button" role="tab"
+                        aria-selected="true" aria-controls="why-service-panel" tabindex="0"
+                        data-title="Nidhi Software"
+                        data-description="Manage members, savings, deposits, and loan operations in one secure platform. Automated workflows and clear reports help your Nidhi company serve members efficiently.">
+                        <i class="fas fa-users" aria-hidden="true"></i><span>Nidhi Software</span>
+                    </button>
+                    <button class="why-service-tab" id="service-tab-nbfc" type="button" role="tab"
+                        aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
+                        data-title="NBFC Software"
+                        data-description="Streamline loan origination, customer records, EMI schedules, collections, and operational reporting with software designed for lending teams.">
+                        <i class="fas fa-landmark" aria-hidden="true"></i><span>NBFC Software</span>
+                    </button>
+                    <button class="why-service-tab" id="service-tab-erp" type="button" role="tab"
+                        aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
+                        data-title="ERP Accounting"
+                        data-description="Connect accounting, billing, inventory, and day-to-day workflows in one system. Get a clearer view of business operations and make informed decisions.">
+                        <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i><span>ERP Accounting</span>
+                    </button>
+                    <button class="why-service-tab" id="service-tab-ecommerce" type="button" role="tab"
+                        aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
+                        data-title="eCommerce Platforms"
+                        data-description="Launch responsive B2B or B2C shopping experiences with product catalogs, order management, and secure checkout integrations tailored to your business.">
+                        <i class="fas fa-cart-shopping" aria-hidden="true"></i><span>eCommerce</span>
+                    </button>
+                    <button class="why-service-tab" id="service-tab-mobile" type="button" role="tab"
+                        aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
+                        data-title="Mobile Applications"
+                        data-description="Give customers and teams a simple way to connect with your business through Android and iOS apps with thoughtful interfaces and secure integrations.">
+                        <i class="fas fa-mobile-screen-button" aria-hidden="true"></i><span>Mobile Apps</span>
+                    </button>
+                    <button class="why-service-tab" id="service-tab-custom" type="button" role="tab"
+                        aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
+                        data-title="Custom Software"
+                        data-description="Replace manual work with software built around your processes, requirements, and future plans—from focused tools to connected business platforms.">
+                        <i class="fas fa-code" aria-hidden="true"></i><span>Custom Software</span>
+                    </button>
+                </div>
 
-                    <div class="dhronix-process-list features-list">
+                <div class="why-service-panel" id="why-service-panel" role="tabpanel"
+                    aria-labelledby="service-tab-nidhi" tabindex="0">
+                    <div class="why-service-copy">
+                        <span class="why-service-kicker">SOFTWARE FOR YOUR NEXT STAGE</span>
+                        <h3 data-service-title>Nidhi Software</h3>
+                        <p data-service-description>Manage members, savings, deposits, and loan operations in one secure platform. Automated workflows and clear reports help your Nidhi company serve members efficiently.</p>
+                        <a href="{{ route('services') }}" class="why-service-link">
+                            Explore our services <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
 
-                        <!-- STEP 01 -->
-                        <div class="dhronix-process-item animate-on-scroll">
-                            <div class="dhronix-process-number"><i class="fas fa-paint-brush fs-6"></i></div>
-
-                            <div>
-                                <h4>Customise Your Brand</h4>
-                                <p>Control fonts, colors, featured products, and UI flow.</p>
-                            </div>
+                    <div class="features-image">
+                        <img src="{{ asset('assets/choose.png') }}" alt="Dhronix business software dashboard"
+                            class="laptop-img">
+                        <div class="floating-card card-three">
+                            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                            <div><strong>Better Performance</strong><span>Faster &amp; Smarter</span></div>
                         </div>
-
-                        <!-- STEP 02 -->
-                        <div class="dhronix-process-item animate-on-scroll delay-1">
-                            <div class="dhronix-process-number"><i class="fas fa-layer-group fs-6"></i></div>
-
-
-                            <div>
-                                <h4>Robust Modular Architecture</h4>
-                                <p>Connect to thousands of APIs, modules, and gateways.</p>
-                            </div>
+                        <div class="floating-card card-one-choose">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            <div><strong>Maximum Security</strong><span>Your Data, Our Priority</span></div>
                         </div>
-
-                        <!-- STEP 03 -->
-                        <div class="dhronix-process-item animate-on-scroll delay-2">
-                            <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
-
-                            <div>
-                                <h4>Flexible Revenue Controls</h4>
-                                <p>Easily set rules for margins, discounts, and markups.</p>
-                            </div>
-                        </div>
-
-                        <!-- STEP 04 -->
-                        <div class="dhronix-process-item animate-on-scroll delay-3">
-                            <div class="dhronix-process-number"><i class="fas fa-chart-bar fs-6"></i></div>
-
-                            <div>
-                                <h4>Advanced Reporting & Analytics</h4>
-                                <p>Get complete visibility into traffic, conversion, and revenue.</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
-            <div class="features-image animate-on-scroll delay-2">
-                <img src="assets/choose.png" alt="Software Dashboard" class="laptop-img">
-
-                <!-- Top Right -->
-                <div class="floating-card card-three">
-                    <i class="fa-solid fa-bolt"></i>
-                    <div>
-                        <strong>Better Performance</strong>
-                        <span>Faster & Smarter</span>
-                    </div>
-                </div>
-
-                <!-- Left Center -->
-                <div class="floating-card card-one-choose">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <div>
-                        <strong>Maximum Security</strong>
-                        <span>Your Data, Our Priority</span>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </section>
+    <script>
+        document.querySelectorAll('[data-service-tabs]').forEach((tabs) => {
+            const tabButtons = Array.from(tabs.querySelectorAll('[role="tab"]'));
+            const panel = tabs.querySelector('[role="tabpanel"]');
+            const title = panel.querySelector('[data-service-title]');
+            const description = panel.querySelector('[data-service-description]');
+
+            const activateTab = (tab) => {
+                tabButtons.forEach((button) => {
+                    const isActive = button === tab;
+                    button.classList.toggle('is-active', isActive);
+                    button.setAttribute('aria-selected', String(isActive));
+                    button.tabIndex = isActive ? 0 : -1;
+                });
+
+                panel.setAttribute('aria-labelledby', tab.id);
+                panel.classList.add('is-changing');
+                window.requestAnimationFrame(() => {
+                    title.textContent = tab.dataset.title;
+                    description.textContent = tab.dataset.description;
+                    panel.classList.remove('is-changing');
+                });
+            };
+
+            tabButtons.forEach((tab, index) => {
+                tab.addEventListener('click', () => activateTab(tab));
+                tab.addEventListener('keydown', (event) => {
+                    let nextIndex;
+
+                    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                        nextIndex = (index + 1) % tabButtons.length;
+                    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+                        nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+                    } else if (event.key === 'Home') {
+                        nextIndex = 0;
+                    } else if (event.key === 'End') {
+                        nextIndex = tabButtons.length - 1;
+                    } else {
+                        return;
+                    }
+
+                    event.preventDefault();
+                    tabButtons[nextIndex].focus();
+                    activateTab(tabButtons[nextIndex]);
+                });
+            });
+        });
+    </script>
 
     <!-- 6. CTA Banner Section -->
     <section class="cta-section section-padding">
