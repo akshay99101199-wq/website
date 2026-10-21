@@ -134,6 +134,61 @@
     background: linear-gradient(145deg, #0d2847, #071a30);
 }
 
+.services-page .service-card-back::after {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    background:
+        linear-gradient(145deg, #0d2847, #071a30) padding-box,
+        conic-gradient(
+            from var(--electric-angle),
+            transparent 0deg 245deg,
+            #ffa228 278deg,
+            #fff9a9 296deg,
+            #ffffff 304deg,
+            #ffae00 313deg,
+            transparent 340deg 360deg
+        ) border-box;
+    box-shadow: inset 0 0 14px rgba(0, 234, 255, 0.12), 0 0 16px rgba(0, 190, 255, 0.22);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+}
+
+.services-page .service-card-back > * {
+    position: relative;
+    z-index: 1;
+}
+
+.services-page .service-item:hover .service-card-back::after,
+.services-page .service-item:focus-within .service-card-back::after {
+    animation: service-electric-border 2.2s linear infinite, service-electric-pulse 1.4s ease-in-out infinite alternate;
+}
+
+@property --electric-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes service-electric-border {
+    to {
+        --electric-angle: 360deg;
+    }
+}
+
+@keyframes service-electric-pulse {
+    from {
+        opacity: 0.55;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .services-page .service-card-back h3 {
     color: var(--white);
 }
@@ -260,6 +315,10 @@
     color: var(--service-accent);
     font: 700 12px 'Montserrat', sans-serif;
     text-decoration: none;
+}
+
+.services-page .service-item:nth-child(even) .service-card-back .service-link {
+    color: var(--secondary-color);
 }
 
 .services-page .service-item .service-link i {
@@ -605,7 +664,9 @@
 
 @media (prefers-reduced-motion: reduce) {
     .services-page .service-card-inner,
-    .services-page .service-item .service-link i {
+    .services-page .service-item .service-link i,
+    .services-page .service-card-back::after {
         transition: none;
+        animation: none !important;
     }
 }
