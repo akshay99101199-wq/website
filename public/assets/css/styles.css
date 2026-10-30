@@ -279,7 +279,7 @@ body p {
     max-width: calc(100vw - 20px);
     min-height: 52px;
     overflow: hidden;
-    padding: 0 15px;
+    padding: 0 8px;
     color: var(--white);
     text-decoration: none;
     border-radius: 16px 0 0 16px;
@@ -1375,7 +1375,7 @@ body p {
 
     .sticky-contact-link {
         min-height: 48px;
-        padding: 0 15px;
+        padding: 0 8px;
     }
 
     .nav-links,
