@@ -1158,6 +1158,327 @@ body p {
     transform: scale(1.1);
 }
 
+/* --- Connected Ecosystem Flow --- */
+.ecosystem-flow-section {
+    padding: 42px 0;
+    background: var(--white);
+}
+
+.ecosystem-flow-diagram {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 12 / 5;
+    overflow: hidden;
+    border-radius: 28px;
+    background: var(--primary-light);
+    color: var(--white);
+}
+
+.ecosystem-flow-connectors {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.ecosystem-flow-path {
+    fill: none;
+    stroke: rgba(255, 255, 255, .76);
+    stroke-width: 1.8;
+    stroke-dasharray: 3 6;
+    stroke-linecap: round;
+    animation: ecosystem-flow-dash 2s linear infinite;
+}
+
+.ecosystem-flow-path-main {
+    stroke: var(--orange);
+    stroke-width: 2.5;
+    stroke-dasharray: 7 8;
+}
+
+.ecosystem-flow-junction {
+    fill: var(--primary-light);
+    stroke: rgba(255, 255, 255, .8);
+    stroke-width: 1.5;
+}
+
+.ecosystem-flow-sources {
+    position: absolute;
+    top: 4%;
+    bottom: 4%;
+    left: 3.5%;
+    z-index: 1;
+    width: 36.5%;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .07);
+}
+
+.ecosystem-flow-sources h3 {
+    position: absolute;
+    top: 48%;
+    left: 8%;
+    margin: 0;
+    color: var(--orange);
+    font-size: clamp(11px, 1.15vw, 16px);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ecosystem-flow-sources ul {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ecosystem-flow-sources li {
+    position: absolute;
+    display: flex;
+    width: 27.4%;
+    height: 9.2%;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 7px;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 7px;
+    background: var(--primary-dark);
+    color: var(--white);
+    font-size: clamp(9px, .9vw, 12px);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ecosystem-flow-sources li i {
+    color: var(--orange);
+    font-size: 11px;
+}
+
+.ecosystem-flow-source-paid,
+.ecosystem-flow-source-web {
+    left: 7.5%;
+}
+
+.ecosystem-flow-source-paid {
+    top: 19.5%;
+}
+
+.ecosystem-flow-source-inapp,
+.ecosystem-flow-source-social {
+    left: 44%;
+}
+
+.ecosystem-flow-source-inapp {
+    top: 5.4%;
+}
+
+.ecosystem-flow-source-display {
+    top: 31.5%;
+    left: 34%;
+}
+
+.ecosystem-flow-source-dsp {
+    top: 59%;
+    left: 34%;
+}
+
+.ecosystem-flow-source-web {
+    top: 72%;
+}
+
+.ecosystem-flow-sources li.ecosystem-flow-source-social {
+    top: 87%;
+    width: 35%;
+    font-size: clamp(8px, .78vw, 10px);
+}
+
+.ecosystem-flow-note {
+    position: absolute;
+    z-index: 3;
+    left: 42%;
+    width: 13%;
+    color: rgba(255, 255, 255, .9);
+    font-size: clamp(7px, .72vw, 10px);
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.ecosystem-flow-note::after {
+    display: block;
+    width: 42%;
+    height: 2px;
+    margin-top: 5px;
+    background: var(--orange);
+    content: "";
+}
+
+.ecosystem-flow-note-top {
+    top: 6%;
+}
+
+.ecosystem-flow-note-bottom {
+    bottom: 6%;
+}
+
+.ecosystem-flow-network {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    z-index: 3;
+    width: 33%;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+}
+
+.ecosystem-flow-orbit {
+    position: absolute;
+    inset: 7%;
+    border: 1px solid rgba(245, 130, 42, .9);
+    border-radius: 50%;
+    box-shadow: 0 0 0 18px rgba(245, 130, 42, .1), 0 0 0 36px rgba(255, 255, 255, .035);
+}
+
+.ecosystem-flow-orbit::before,
+.ecosystem-flow-orbit::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--orange);
+    content: "";
+    animation: ecosystem-flow-pulse 2.4s ease-in-out infinite alternate;
+}
+
+.ecosystem-flow-orbit::before {
+    top: 17%;
+    right: 20%;
+}
+
+.ecosystem-flow-orbit::after {
+    right: 4%;
+    bottom: 34%;
+    animation-delay: 1.2s;
+}
+
+.ecosystem-flow-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    width: 46%;
+    aspect-ratio: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--primary-dark);
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.ecosystem-flow-core-logo {
+    display: block;
+    width: 76%;
+    height: 56%;
+    object-fit: contain;
+}
+
+.ecosystem-flow-core > span:last-child {
+    font-size: clamp(7px, .75vw, 10px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.ecosystem-flow-feature {
+    position: absolute;
+    display: flex;
+    width: 28%;
+    aspect-ratio: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--primary-dark);
+    text-align: center;
+}
+
+.ecosystem-flow-feature i {
+    font-size: clamp(16px, 1.8vw, 24px);
+}
+
+.ecosystem-flow-feature span {
+    font-size: clamp(8px, .85vw, 11px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.ecosystem-flow-feature-security {
+    top: 0;
+    left: 57%;
+}
+
+.ecosystem-flow-feature-performance {
+    top: 35%;
+    right: -2%;
+}
+
+.ecosystem-flow-feature-ai {
+    left: 55%;
+    bottom: -1%;
+}
+
+.ecosystem-flow-outcome {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    z-index: 3;
+    display: flex;
+    width: 11%;
+    aspect-ratio: .88;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    background: var(--white);
+    color: var(--primary-dark);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.ecosystem-flow-outcome i {
+    color: var(--orange);
+    font-size: clamp(20px, 2.3vw, 30px);
+}
+
+.ecosystem-flow-outcome strong {
+    font-size: clamp(9px, .95vw, 13px);
+    line-height: 1.3;
+}
+
+@keyframes ecosystem-flow-dash {
+    to {
+        stroke-dashoffset: -28;
+    }
+}
+
+@keyframes ecosystem-flow-pulse {
+    to {
+        opacity: .4;
+        transform: scale(.7);
+    }
+}
+
 /* --- Footer --- */
 .footer {
     background-color: var(--white);
@@ -1459,5 +1780,124 @@ body p {
 
     .news-ticker-track {
         animation: none;
+    }
+
+    .ecosystem-flow-path,
+    .ecosystem-flow-orbit::before,
+    .ecosystem-flow-orbit::after {
+        animation: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .ecosystem-flow-section {
+        padding: 28px 0;
+    }
+
+    .ecosystem-flow-diagram {
+        display: grid;
+        aspect-ratio: auto;
+        gap: 20px;
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .ecosystem-flow-connectors {
+        display: none;
+    }
+
+    .ecosystem-flow-sources {
+        position: relative;
+        width: 100%;
+        min-height: 190px;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .ecosystem-flow-sources::after,
+    .ecosystem-flow-network::after {
+        position: absolute;
+        left: 50%;
+        color: var(--orange);
+        content: "\2193";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        transform: translateX(-50%);
+    }
+
+    .ecosystem-flow-sources::after {
+        bottom: -20px;
+    }
+
+    .ecosystem-flow-sources h3 {
+        position: static;
+        margin-bottom: 14px;
+        font-size: 14px;
+    }
+
+    .ecosystem-flow-sources ul {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .ecosystem-flow-sources li {
+        position: absolute;
+        width: auto;
+        height: auto;
+        min-height: 38px;
+        padding: 8px 10px;
+        font-size: 11px;
+        white-space: normal;
+    }
+
+    .ecosystem-flow-source-paid,
+    .ecosystem-flow-source-inapp,
+    .ecosystem-flow-source-display,
+    .ecosystem-flow-source-dsp,
+    .ecosystem-flow-source-web,
+    .ecosystem-flow-sources li.ecosystem-flow-source-social {
+        position: static !important;
+        width: auto;
+        font-size: 11px;
+    }
+
+    .ecosystem-flow-network {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: min(72vw, 300px);
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .ecosystem-flow-network::after {
+        bottom: -22px;
+    }
+
+    .ecosystem-flow-feature {
+        width: 30%;
+    }
+
+    .ecosystem-flow-feature-performance {
+        right: auto;
+        left: 0;
+        top: 38%;
+    }
+
+    .ecosystem-flow-note {
+        display: none;
+    }
+
+    .ecosystem-flow-outcome {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 112px;
+        justify-self: center;
+        margin: 0 auto;
+        transform: none;
     }
 }
