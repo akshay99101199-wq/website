@@ -655,9 +655,9 @@
         </div>
     </section>
 
-    <section class="ecosystem-flow-section" aria-label="Connected digital channels">
+    <section class="ecosystem-flow-section cta-section section-padding" aria-label="Connected digital channels">
         <div class="container">
-            <div class="ecosystem-flow-diagram">
+            <div class="ecosystem-flow-diagram cta-box animate-on-scroll">
                 <svg class="ecosystem-flow-connectors" viewBox="0 0 1200 500" preserveAspectRatio="none"
                     aria-hidden="true">
                     <defs>
