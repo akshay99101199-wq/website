@@ -389,10 +389,11 @@
     <!-- 5. Features Section (Everything you need in one solution) -->
     <section class="features-section section-padding">
         <div class="container">
-            <div class="features-intro animate-on-scroll">
-                <span class="section-label">WHY CHOOSE US</span>
-                <h2>Technology shaped around your business</h2>
-                <p>Explore secure, practical software solutions that simplify operations and help your business grow.</p>
+            <div class="section-header text-center animate-on-scroll">
+                <span class="section-label">Why Choose Us</span>
+                <br />
+                <h2 class="mb-0">Technology shaped around your business</h2>
+                <p  class="pb-4">Explore secure, practical software solutions that simplify operations and help your business grow.</p>
             </div>
 
             <div class="why-service-tabs animate-on-scroll" data-service-tabs>
@@ -401,37 +402,49 @@
                     <button class="why-service-tab is-active" id="service-tab-nidhi" type="button" role="tab"
                         aria-selected="true" aria-controls="why-service-panel" tabindex="0"
                         data-title="Nidhi Software"
-                        data-description="Manage members, savings, deposits, and loan operations in one secure platform. Automated workflows and clear reports help your Nidhi company serve members efficiently.">
+                        data-description="Manage members, savings, deposits, and loan operations in one secure platform. Automated workflows and clear reports help your Nidhi company serve members efficiently."
+                        data-image="{{ asset('assets/service2.png') }}"
+                        data-image-alt="Nidhi, NBFC, ERP, and eCommerce software solutions">
                         <i class="fas fa-users" aria-hidden="true"></i><span>Nidhi Software</span>
                     </button>
                     <button class="why-service-tab" id="service-tab-nbfc" type="button" role="tab"
                         aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
                         data-title="NBFC Software"
-                        data-description="Streamline loan origination, customer records, EMI schedules, collections, and operational reporting with software designed for lending teams.">
+                        data-description="Streamline loan origination, customer records, EMI schedules, collections, and operational reporting with software designed for lending teams."
+                        data-image="{{ asset('assets/service6.png') }}"
+                        data-image-alt="Business software dashboard and digital lending tools">
                         <i class="fas fa-landmark" aria-hidden="true"></i><span>NBFC Software</span>
                     </button>
                     <button class="why-service-tab" id="service-tab-erp" type="button" role="tab"
                         aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
                         data-title="ERP Accounting"
-                        data-description="Connect accounting, billing, inventory, and day-to-day workflows in one system. Get a clearer view of business operations and make informed decisions.">
+                        data-description="Connect accounting, billing, inventory, and day-to-day workflows in one system. Get a clearer view of business operations and make informed decisions."
+                        data-image="{{ asset('assets/service5.png') }}"
+                        data-image-alt="Business analytics dashboard for ERP and accounting">
                         <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i><span>ERP Accounting</span>
                     </button>
                     <button class="why-service-tab" id="service-tab-ecommerce" type="button" role="tab"
                         aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
                         data-title="eCommerce Platforms"
-                        data-description="Launch responsive B2B or B2C shopping experiences with product catalogs, order management, and secure checkout integrations tailored to your business.">
+                        data-description="Launch responsive B2B or B2C shopping experiences with product catalogs, order management, and secure checkout integrations tailored to your business."
+                        data-image="{{ asset('assets/service4.png') }}"
+                        data-image-alt="eCommerce sales and analytics dashboard">
                         <i class="fas fa-cart-shopping" aria-hidden="true"></i><span>eCommerce</span>
                     </button>
                     <button class="why-service-tab" id="service-tab-mobile" type="button" role="tab"
                         aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
                         data-title="Mobile Applications"
-                        data-description="Give customers and teams a simple way to connect with your business through Android and iOS apps with thoughtful interfaces and secure integrations.">
+                        data-description="Give customers and teams a simple way to connect with your business through Android and iOS apps with thoughtful interfaces and secure integrations."
+                        data-image="{{ asset('assets/service3.png') }}"
+                        data-image-alt="Mobile and custom software development workspace">
                         <i class="fas fa-mobile-screen-button" aria-hidden="true"></i><span>Mobile Apps</span>
                     </button>
                     <button class="why-service-tab" id="service-tab-custom" type="button" role="tab"
                         aria-selected="false" aria-controls="why-service-panel" tabindex="-1"
                         data-title="Custom Software"
-                        data-description="Replace manual work with software built around your processes, requirements, and future plans—from focused tools to connected business platforms.">
+                        data-description="Replace manual work with software built around your processes, requirements, and future plans—from focused tools to connected business platforms."
+                        data-image="{{ asset('assets/service1.png') }}"
+                        data-image-alt="Software team collaborating on custom business solutions">
                         <i class="fas fa-code" aria-hidden="true"></i><span>Custom Software</span>
                     </button>
                 </div>
@@ -448,16 +461,9 @@
                     </div>
 
                     <div class="features-image">
-                        <img src="{{ asset('assets/choose.png') }}" alt="Dhronix business software dashboard"
-                            class="laptop-img">
-                        <div class="floating-card card-three">
-                            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-                            <div><strong>Better Performance</strong><span>Faster &amp; Smarter</span></div>
-                        </div>
-                        <div class="floating-card card-one-choose">
-                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-                            <div><strong>Maximum Security</strong><span>Your Data, Our Priority</span></div>
-                        </div>
+                        <img src="{{ asset('assets/service2.png') }}"
+                            alt="Nidhi, NBFC, ERP, and eCommerce software solutions"
+                            class="laptop-img" data-service-image>
                     </div>
                 </div>
             </div>
@@ -469,6 +475,7 @@
             const panel = tabs.querySelector('[role="tabpanel"]');
             const title = panel.querySelector('[data-service-title]');
             const description = panel.querySelector('[data-service-description]');
+            const image = panel.querySelector('[data-service-image]');
 
             const activateTab = (tab) => {
                 tabButtons.forEach((button) => {
@@ -483,6 +490,8 @@
                 window.requestAnimationFrame(() => {
                     title.textContent = tab.dataset.title;
                     description.textContent = tab.dataset.description;
+                    image.src = tab.dataset.image;
+                    image.alt = tab.dataset.imageAlt;
                     panel.classList.remove('is-changing');
                 });
             };
