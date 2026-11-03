@@ -114,6 +114,10 @@
                     <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP ONE</span>
                             <h4>Requirement & Design</h4>
                             <p>Share your vision. Our UI/UX team designs a stunning, conversion-optimized storefront
@@ -123,6 +127,10 @@
                     <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP TWO</span>
                             <h4>Development & Integration</h4>
                             <p>Full-stack development with payment, logistics, and inventory integrations. Product
@@ -132,6 +140,10 @@
                     <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP THREE</span>
                             <h4>Launch & Grow</h4>
                             <p>We launch your store, set up SEO, and hand over with complete admin training. Ongoing

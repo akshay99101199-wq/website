@@ -118,6 +118,10 @@
                     <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP ONE</span>
                             <h4>Requirement Analysis</h4>
                             <p>We assess your traffic, storage, and performance needs to recommend the perfect hosting
@@ -127,6 +131,10 @@
                     <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP TWO</span>
                             <h4>Server Setup & Migration</h4>
                             <p>We set up your environment, migrate your data and applications with zero downtime using
@@ -136,6 +144,10 @@
                     <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP THREE</span>
                             <h4>Monitor & Optimize</h4>
                             <p>24/7 proactive monitoring, performance tuning, and monthly reports on uptime, speed, and

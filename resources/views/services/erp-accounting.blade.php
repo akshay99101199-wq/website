@@ -113,6 +113,10 @@
                     <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP ONE</span>
                             <h4>Business Analysis</h4>
                             <p>Our consultants study your current processes and configure the ERP to match your exact
@@ -122,6 +126,10 @@
                     <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP TWO</span>
                             <h4>Data Migration & Setup</h4>
                             <p>Import existing data from Tally, Excel, or any format. Configure chart of accounts, tax
@@ -131,6 +139,10 @@
                     <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP THREE</span>
                             <h4>Training & Go Live</h4>
                             <p>Full team training sessions, user manuals, and a dedicated account manager to ensure a

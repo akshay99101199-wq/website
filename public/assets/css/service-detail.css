@@ -2131,6 +2131,8 @@
 }
 
 .service-detail .service-why-section .nidhi-benefit-card {
+    position: relative;
+    isolation: isolate;
     display: flex;
     min-width: 0;
     min-height: 126px;
@@ -2138,6 +2140,7 @@
     align-items: center;
     justify-content: center;
     padding: 14px 10px;
+    overflow: hidden;
     border: 1px solid rgba(13, 40, 71, 0.1);
     border-radius: 9px;
     background: #fff;
@@ -2146,10 +2149,31 @@
     transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
+.service-detail .service-why-section .nidhi-benefit-card::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(145deg, var(--primary-dark), #2b6a9e);
+    content: "";
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-detail .service-why-section .nidhi-benefit-card > * {
+    position: relative;
+    z-index: 1;
+}
+
 .service-detail .service-why-section .nidhi-benefit-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(243, 108, 33, 0.42);
+    border-color: var(--primary-dark);
     box-shadow: 0 14px 28px rgba(13, 40, 71, 0.11);
+}
+
+.service-detail .service-why-section .nidhi-benefit-card:hover::before {
+    transform: scaleY(1);
 }
 
 .service-detail .service-why-section .nidhi-benefit-icon {
@@ -2170,10 +2194,22 @@
     color: #286493;
 }
 
+.service-detail .service-why-section .nidhi-benefit-card:hover .nidhi-benefit-icon,
+.service-detail .service-why-section .nidhi-benefit-card:hover:nth-child(even) .nidhi-benefit-icon {
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+    transition: background-color 250ms ease 120ms, color 250ms ease 120ms;
+}
+
 .service-detail .service-why-section .nidhi-benefit-card strong {
     color: var(--primary-dark);
     font-size: 11px;
     line-height: 1.5;
+    transition: color 250ms ease 120ms;
+}
+
+.service-detail .service-why-section .nidhi-benefit-card:hover strong {
+    color: #fff;
 }
 
 .service-detail .service-why-section .nidhi-why-cta {
@@ -2758,15 +2794,60 @@
 }
 
 .service-detail .service-onboarding-section .nidhi-onboarding-steps .step-content {
+    position: relative;
+    isolation: isolate;
     width: 100%;
     min-height: 190px;
     padding: 24px 23px;
+    overflow: hidden;
     border: 1px solid rgba(13, 40, 71, 0.1);
     border-top: 3px solid var(--primary-dark);
     border-radius: 9px;
     background: #fff;
     box-shadow: 0 12px 32px rgba(13, 40, 71, 0.07);
     transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.service-detail .service-onboarding-section .nidhi-onboarding-steps .step-content > :not(.step-hover-overlay) {
+    position: relative;
+    z-index: 1;
+}
+
+.service-detail .service-onboarding-section .step-hover-overlay {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark), #2b6a9e);
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 500ms ease, opacity 500ms ease;
+}
+
+.service-detail .service-onboarding-section .step-hover-overlay--1 {
+    left: 0;
+    transition-delay: 105ms;
+}
+
+.service-detail .service-onboarding-section .step-hover-overlay--2 {
+    left: 25%;
+    transition-delay: 105ms;
+}
+
+.service-detail .service-onboarding-section .step-hover-overlay--3 {
+    left: 50%;
+    transition-delay: 105ms;
+}
+
+.service-detail .service-onboarding-section .step-hover-overlay--4 {
+    left: 75%;
+    transition-delay: 0ms;
+}
+
+.service-detail .service-onboarding-section .nidhi-onboarding-steps .step-row:hover .step-hover-overlay {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 .service-detail .service-onboarding-section .nidhi-onboarding-steps .step-row:nth-child(2) .step-content {
@@ -2778,6 +2859,21 @@
     box-shadow: 0 17px 36px rgba(13, 40, 71, 0.12);
 }
 
+.service-detail .service-onboarding-section .nidhi-onboarding-steps .step-row:hover .nidhi-step-label {
+    color: #ffb36b;
+    transition: color 250ms ease 180ms;
+}
+
+.service-detail .service-onboarding-section .nidhi-onboarding-steps .step-row:hover .step-content h4 {
+    color: #fff;
+    transition: color 250ms ease 180ms;
+}
+
+.service-detail .service-onboarding-section .nidhi-onboarding-steps .step-row:hover .step-content p {
+    color: rgba(255, 255, 255, 0.82);
+    transition: color 250ms ease 180ms;
+}
+
 .service-detail .service-onboarding-section .nidhi-step-label {
     display: block;
     margin-bottom: 8px;
@@ -2785,18 +2881,21 @@
     font-size: 9px;
     font-weight: 800;
     letter-spacing: 0.13em;
+    transition: color 250ms ease;
 }
 
 .service-detail .service-onboarding-section .nidhi-onboarding-steps .step-content h4 {
     margin: 0 0 10px;
     color: var(--primary-dark);
     font-size: 16px;
+    transition: color 250ms ease;
 }
 
 .service-detail .service-onboarding-section .nidhi-onboarding-steps .step-content p {
     margin: 0;
     color: #637286;
     font-size: 13px;
+    transition: color 250ms ease;
 }
 
 .service-detail .service-onboarding-section .side-img {
@@ -3019,6 +3118,12 @@
     .service-detail--nidhi-software .nidhi-benefit-card,
     .service-detail--nidhi-software .nidhi-benefit-card::before,
     .service-detail--nidhi-software .nidhi-benefit-card * {
+        transition: none !important;
+    }
+
+    .service-detail .service-why-section .nidhi-benefit-card,
+    .service-detail .service-why-section .nidhi-benefit-card::before,
+    .service-detail .service-why-section .nidhi-benefit-card * {
         transition: none !important;
     }
 

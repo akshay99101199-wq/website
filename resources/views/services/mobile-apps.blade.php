@@ -113,6 +113,10 @@
                     <div class="step-row animate-on-scroll">
                         <div class="step-number">01</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP ONE</span>
                             <h4>Discovery & Planning</h4>
                             <p>We analyze your requirements, define features, create user stories, and plan the complete
@@ -122,6 +126,10 @@
                     <div class="step-row animate-on-scroll delay-1">
                         <div class="step-number">02</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP TWO</span>
                             <h4>Design & Development</h4>
                             <p>UI/UX design approval, sprint-based development with weekly demos, and continuous
@@ -131,6 +139,10 @@
                     <div class="step-row animate-on-scroll delay-2">
                         <div class="step-number">03</div>
                         <div class="step-content">
+                            <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                            <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
                             <span class="nidhi-step-label">STEP THREE</span>
                             <h4>Testing & Launch</h4>
                             <p>Comprehensive QA, performance testing, App Store submission, and post-launch monitoring
