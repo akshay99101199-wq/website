@@ -148,15 +148,39 @@
         <div class="steps-list nidhi-onboarding-steps">
             <article class="step-row animate-on-scroll">
                 <div class="step-number"><span>01</span><i class="fas fa-sliders-h" aria-hidden="true"></i></div>
-                <div class="step-content"><span class="nidhi-step-label">STEP ONE</span><h3>Register & Configure</h3><p>Share your Nidhi Company details. Our team sets up your branded portal, user roles, and branch structure within 24 hours.</p></div>
+                <div class="step-content">
+                    <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
+                    <span class="nidhi-step-label">STEP ONE</span>
+                    <h3>Register & Configure</h3>
+                    <p>Share your Nidhi Company details. Our team sets up your branded portal, user roles, and branch structure within 24 hours.</p>
+                </div>
             </article>
             <article class="step-row animate-on-scroll delay-1">
                 <div class="step-number"><span>02</span><i class="fas fa-database" aria-hidden="true"></i></div>
-                <div class="step-content"><span class="nidhi-step-label">STEP TWO</span><h3>Data Migration</h3><p>We securely migrate your existing member records, accounts, and loan data from any format to our system.</p></div>
+                <div class="step-content">
+                    <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
+                    <span class="nidhi-step-label">STEP TWO</span>
+                    <h3>Data Migration</h3>
+                    <p>We securely migrate your existing member records, accounts, and loan data from any format to our system.</p>
+                </div>
             </article>
             <article class="step-row animate-on-scroll delay-2">
                 <div class="step-number"><span>03</span><i class="fas fa-rocket" aria-hidden="true"></i></div>
-                <div class="step-content"><span class="nidhi-step-label">STEP THREE</span><h3>Go Live & Grow</h3><p>Your team gets trained, the system goes live, and our 24/7 support team is always available to help you scale.</p></div>
+                <div class="step-content">
+                    <span class="step-hover-overlay step-hover-overlay--1" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--2" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--3" aria-hidden="true"></span>
+                    <span class="step-hover-overlay step-hover-overlay--4" aria-hidden="true"></span>
+                    <span class="nidhi-step-label">STEP THREE</span>
+                    <h3>Go Live & Grow</h3>
+                    <p>Your team gets trained, the system goes live, and our 24/7 support team is always available to help you scale.</p>
+                </div>
             </article>
         </div>
     </div>

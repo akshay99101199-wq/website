@@ -1509,9 +1509,12 @@
 }
 
 .service-detail--nidhi-software .nidhi-onboarding-steps .step-content {
+    position: relative;
+    isolation: isolate;
     width: 100%;
     min-height: 190px;
     padding: 24px 23px;
+    overflow: hidden;
     border: 1px solid rgba(13, 40, 71, 0.1);
     border-top: 3px solid var(--primary-dark);
     border-radius: 9px;
@@ -1520,13 +1523,71 @@
     transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
+.service-detail--nidhi-software .nidhi-onboarding-steps .step-content > :not(.step-hover-overlay) {
+    position: relative;
+    z-index: 1;
+}
+
+.service-detail--nidhi-software .step-hover-overlay {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark), #2b6a9e);
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 500ms ease, opacity 500ms ease;
+}
+
+.service-detail--nidhi-software .step-hover-overlay--1 {
+    left: 0;
+    transition-delay: 105ms;
+}
+
+.service-detail--nidhi-software .step-hover-overlay--2 {
+    left: 25%;
+    transition-delay: 105ms;
+}
+
+.service-detail--nidhi-software .step-hover-overlay--3 {
+    left: 50%;
+    transition-delay: 105ms;
+}
+
+.service-detail--nidhi-software .step-hover-overlay--4 {
+    left: 75%;
+    transition-delay: 0ms;
+}
+
+.service-detail--nidhi-software .nidhi-onboarding-steps .step-row:hover .step-hover-overlay {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
 .service-detail--nidhi-software .nidhi-onboarding-steps .step-row:nth-child(2) .step-content {
     border-top-color: var(--secondary-color);
 }
 
 .service-detail--nidhi-software .nidhi-onboarding-steps .step-row:hover .step-content {
     transform: translateY(-4px);
+    border-color: var(--primary-dark);
     box-shadow: 0 17px 36px rgba(13, 40, 71, 0.12);
+}
+
+.service-detail--nidhi-software .nidhi-onboarding-steps .step-row:hover .nidhi-step-label {
+    color: #ffb36b;
+    transition: color 250ms ease 180ms;
+}
+
+.service-detail--nidhi-software .nidhi-onboarding-steps .step-row:hover .step-content h3 {
+    color: #fff;
+    transition: color 250ms ease 180ms;
+}
+
+.service-detail--nidhi-software .nidhi-onboarding-steps .step-row:hover .step-content p {
+    color: rgba(255, 255, 255, 0.82);
+    transition: color 250ms ease 180ms;
 }
 
 .service-detail--nidhi-software .nidhi-step-label {
@@ -1536,12 +1597,14 @@
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.13em;
+    transition: color 250ms ease;
 }
 
 .service-detail--nidhi-software .nidhi-onboarding-steps .step-content h3 {
     margin: 0 0 10px;
     color: var(--primary-dark);
     font-size: 16px;
+    transition: color 250ms ease;
 }
 
 .service-detail--nidhi-software .nidhi-onboarding-steps .step-content p {
@@ -1549,6 +1612,7 @@
     color: #637286;
     font-size: 12px;
     line-height: 1.75;
+    transition: color 250ms ease;
 }
 
 .service-detail--nidhi-software .nidhi-why-section {
@@ -2902,6 +2966,13 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
+    }
+
+    .service-detail--nidhi-software .nidhi-onboarding-steps .step-content,
+    .service-detail--nidhi-software .nidhi-onboarding-steps .step-content *,
+    .service-detail--nidhi-software .nidhi-onboarding-steps .step-content::before,
+    .service-detail--nidhi-software .nidhi-onboarding-steps .step-content::after {
+        transition: none !important;
     }
 
     .service-detail--nidhi-software .nidhi-hero-product-window,
