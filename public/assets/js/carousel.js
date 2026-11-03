@@ -1,81 +1,288 @@
 $(document).ready(function () {
+    const carousel = document.querySelector('[data-vertical-carousel]');
 
-    var slides = $('.slide-window .slide');
-    var dots = $('.slider-dot');
+    if (carousel) {
+        const slides = Array.from(carousel.querySelectorAll('[data-vertical-slide]'));
+        const dots = Array.from(carousel.querySelectorAll('[data-carousel-index]'));
+        const previousButton = carousel.querySelector('[data-carousel-prev]');
+        const nextButton = carousel.querySelector('[data-carousel-next]');
+        const rotationButton = carousel.querySelector('[data-carousel-rotation]');
+        const currentCounter = carousel.querySelector('[data-carousel-current]');
+        const controls = [...dots, previousButton, nextButton, rotationButton].filter(Boolean);
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let currentIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
+        let rotationTimer;
+        let transitionTimer;
+        let isTransitioning = false;
+        let isRotationPaused = false;
 
-    var current = 0;
-    var total = slides.length;
-    var timer;
+        if (currentIndex < 0) currentIndex = 0;
 
+        const updateControls = () => {
+            if (currentCounter) currentCounter.textContent = String(currentIndex + 1).padStart(2, '0');
 
-    function showSlide(index) {
+            dots.forEach((dot, index) => {
+                const isActive = index === currentIndex;
+                dot.classList.toggle('is-active', isActive);
+                dot.setAttribute('aria-current', String(isActive));
+            });
+        };
 
-        if (index >= total) {
-            index = 0;
+        const canRotate = () => (
+            !prefersReducedMotion
+            && !document.hidden
+            && !isRotationPaused
+            && !carousel.matches(':hover')
+            && !carousel.contains(document.activeElement)
+            && !isTransitioning
+            && slides.length > 1
+        );
+
+        const scheduleRotation = () => {
+            window.clearInterval(rotationTimer);
+            if (canRotate()) {
+                rotationTimer = window.setInterval(() => showSlide(currentIndex + 1), 7000);
+            }
+        };
+
+        const showSlide = (requestedIndex) => {
+            if (isTransitioning || slides.length < 2) return;
+
+            const nextIndex = (requestedIndex + slides.length) % slides.length;
+            if (nextIndex === currentIndex) return;
+
+            window.clearInterval(rotationTimer);
+            window.clearTimeout(transitionTimer);
+            isTransitioning = true;
+
+            const outgoingSlide = slides[currentIndex];
+            const incomingSlide = slides[nextIndex];
+
+            outgoingSlide.classList.remove('is-active');
+            outgoingSlide.classList.add('is-exiting-down');
+            outgoingSlide.setAttribute('aria-hidden', 'true');
+
+            incomingSlide.classList.add('is-entering');
+            incomingSlide.setAttribute('aria-hidden', 'false');
+            void incomingSlide.offsetHeight;
+            incomingSlide.classList.add('is-active');
+            incomingSlide.classList.remove('is-entering');
+
+            currentIndex = nextIndex;
+            updateControls();
+            controls.forEach((control) => {
+                control.disabled = true;
+            });
+
+            transitionTimer = window.setTimeout(() => {
+                outgoingSlide.classList.remove('is-exiting-down');
+                controls.forEach((control) => {
+                    control.disabled = false;
+                });
+                isTransitioning = false;
+                scheduleRotation();
+            }, prefersReducedMotion ? 0 : 1100);
+        };
+
+        slides.forEach((slide, index) => {
+            const isActive = index === currentIndex;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+        });
+        updateControls();
+
+        if (previousButton) {
+            previousButton.addEventListener('click', () => showSlide(currentIndex - 1));
         }
 
-        if (index < 0) {
-            index = total - 1;
+        if (nextButton) {
+            nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
         }
 
-        current = index;
+        if (rotationButton) {
+            rotationButton.addEventListener('click', () => {
+                isRotationPaused = !isRotationPaused;
+                rotationButton.setAttribute('aria-pressed', String(isRotationPaused));
+                rotationButton.setAttribute(
+                    'aria-label',
+                    isRotationPaused ? 'Resume slide rotation' : 'Pause slide rotation'
+                );
+                const icon = rotationButton.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-pause', !isRotationPaused);
+                    icon.classList.toggle('fa-play', isRotationPaused);
+                }
+                scheduleRotation();
+            });
+        }
 
-        // Sab hide
+        dots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                const nextIndex = Number(dot.dataset.carouselIndex);
+                showSlide(nextIndex);
+            });
+        });
+
+        carousel.addEventListener('mouseenter', () => window.clearInterval(rotationTimer));
+        carousel.addEventListener('mouseleave', scheduleRotation);
+        carousel.addEventListener('focusin', () => window.clearInterval(rotationTimer));
+        carousel.addEventListener('focusout', (event) => {
+            if (!carousel.contains(event.relatedTarget)) scheduleRotation();
+        });
+        document.addEventListener('visibilitychange', scheduleRotation);
+        scheduleRotation();
+    }
+
+    const heroCarousel = document.querySelector('[data-hero-carousel]');
+
+    if (heroCarousel) {
+        const heroSlides = Array.from(heroCarousel.querySelectorAll('[data-hero-slide]'));
+        const heroDots = Array.from(heroCarousel.querySelectorAll('[data-hero-index]'));
+        const heroPreviousButton = heroCarousel.querySelector('[data-hero-prev]');
+        const heroNextButton = heroCarousel.querySelector('[data-hero-next]');
+        const heroCurrentCounter = heroCarousel.querySelector('[data-hero-current]');
+        const heroControls = [...heroDots, heroPreviousButton, heroNextButton].filter(Boolean);
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let currentHeroIndex = heroSlides.findIndex((slide) => slide.classList.contains('is-active'));
+        let heroRotationTimer;
+        let heroTransitionTimer;
+        let isHeroTransitioning = false;
+
+        if (currentHeroIndex < 0) currentHeroIndex = 0;
+
+        const updateHeroControls = () => {
+            if (heroCurrentCounter) {
+                heroCurrentCounter.textContent = String(currentHeroIndex + 1).padStart(2, '0');
+            }
+
+            heroDots.forEach((dot, index) => {
+                dot.classList.toggle('is-active', index === currentHeroIndex);
+                dot.setAttribute('aria-current', String(index === currentHeroIndex));
+            });
+        };
+
+        const canRotateHero = () => (
+            !prefersReducedMotion
+            && !document.hidden
+            && !heroCarousel.matches(':hover')
+            && !heroCarousel.contains(document.activeElement)
+            && !isHeroTransitioning
+            && heroSlides.length > 1
+        );
+
+        const scheduleHeroRotation = () => {
+            window.clearTimeout(heroRotationTimer);
+            if (canRotateHero()) {
+                heroRotationTimer = window.setTimeout(
+                    () => showHeroSlide(currentHeroIndex + 1),
+                    7000
+                );
+            }
+        };
+
+        const showHeroSlide = (requestedIndex) => {
+            if (isHeroTransitioning || heroSlides.length < 2) return;
+
+            const nextHeroIndex = (requestedIndex + heroSlides.length) % heroSlides.length;
+            if (nextHeroIndex === currentHeroIndex) return;
+
+            window.clearTimeout(heroRotationTimer);
+            window.clearTimeout(heroTransitionTimer);
+            isHeroTransitioning = true;
+
+            const outgoingSlide = heroSlides[currentHeroIndex];
+            const incomingSlide = heroSlides[nextHeroIndex];
+
+            outgoingSlide.classList.remove('is-active');
+            outgoingSlide.classList.add('is-exiting-down');
+            outgoingSlide.setAttribute('aria-hidden', 'true');
+            outgoingSlide.inert = true;
+
+            incomingSlide.classList.add('is-entering');
+            incomingSlide.setAttribute('aria-hidden', 'false');
+            incomingSlide.inert = false;
+            void incomingSlide.offsetHeight;
+
+            window.requestAnimationFrame(() => {
+                incomingSlide.classList.add('is-active');
+                incomingSlide.classList.remove('is-entering');
+            });
+
+            currentHeroIndex = nextHeroIndex;
+            updateHeroControls();
+
+            heroTransitionTimer = window.setTimeout(() => {
+                outgoingSlide.classList.remove('is-exiting-down');
+                isHeroTransitioning = false;
+                scheduleHeroRotation();
+            }, prefersReducedMotion ? 0 : 1100);
+        };
+
+        heroSlides.forEach((slide, index) => {
+            const isActive = index === currentHeroIndex;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+            slide.inert = !isActive;
+        });
+        updateHeroControls();
+
+        if (heroPreviousButton) {
+            heroPreviousButton.addEventListener('click', () => showHeroSlide(currentHeroIndex - 1));
+        }
+
+        if (heroNextButton) {
+            heroNextButton.addEventListener('click', () => showHeroSlide(currentHeroIndex + 1));
+        }
+
+        heroDots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                showHeroSlide(Number(dot.dataset.heroIndex));
+            });
+        });
+
+        heroCarousel.addEventListener('mouseenter', () => window.clearTimeout(heroRotationTimer));
+        heroCarousel.addEventListener('mouseleave', scheduleHeroRotation);
+        heroCarousel.addEventListener('focusin', () => window.clearTimeout(heroRotationTimer));
+        heroCarousel.addEventListener('focusout', (event) => {
+            if (!heroCarousel.contains(event.relatedTarget)) scheduleHeroRotation();
+        });
+        document.addEventListener('visibilitychange', scheduleHeroRotation);
+        scheduleHeroRotation();
+    }
+
+    const slides = $('.slide-window .slide');
+    if (!slides.length) return;
+
+    const dots = $('.slider-dot');
+    let current = 0;
+    let timer;
+
+    function showLegacySlide(index) {
+        current = (index + slides.length) % slides.length;
         slides.stop(true, true).fadeOut(600);
-
-        // Current show
         slides.eq(current).stop(true, true).fadeIn(600);
-
-        // Dots
-        dots.removeClass('active');
-        dots.eq(current).addClass('active');
+        dots.removeClass('active').eq(current).addClass('active');
     }
 
-
-    function startSlider() {
-
+    function startLegacySlider() {
         clearInterval(timer);
-
         timer = setInterval(function () {
-            showSlide(current + 1);
+            showLegacySlide(current + 1);
         }, 4000);
-
     }
 
+    slides.hide().eq(0).show();
+    dots.removeClass('active').eq(0).addClass('active');
+    startLegacySlider();
 
-    // First slide
-    slides.hide();
-    slides.eq(0).show();
-
-    dots.removeClass('active');
-    dots.eq(0).addClass('active');
-
-
-    // Start
-    startSlider();
-
-
-    // Dot click
     dots.on('click', function () {
-
-        var index = $(this).index();
-
-        showSlide(index);
-
-        startSlider();
-
+        showLegacySlide($(this).index());
+        startLegacySlider();
     });
 
-
-    // Pause
     $('.slide-window').on('mouseenter', function () {
         clearInterval(timer);
     });
 
-
-    // Resume
-    $('.slide-window').on('mouseleave', function () {
-        startSlider();
-    });
-
+    $('.slide-window').on('mouseleave', startLegacySlider);
 });
