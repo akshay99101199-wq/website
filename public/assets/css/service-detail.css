@@ -2139,6 +2139,30 @@
     box-shadow: none;
 }
 
+.service-detail.service-detail--ecommerce .service-why-section .nidhi-benefit-image {
+    width: 50%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    box-shadow: none;
+}
+
+.service-detail.service-detail--mobile-apps .service-why-section .nidhi-benefit-image {
+    width: 50%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    box-shadow: none;
+}
+
+.service-detail.service-detail--cloud-hosting .service-why-section .nidhi-benefit-image {
+    width: 50%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    box-shadow: none;
+}
+
 .service-detail .service-why-section .nidhi-benefit-cards {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));

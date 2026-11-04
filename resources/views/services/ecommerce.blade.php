@@ -161,7 +161,7 @@
         'title' => "Why Dhronix for your",
         'highlight' => "eCommerce Platform",
         'description' => "We build stores that convert visitors into buyers and buyers into loyal brand advocates.",
-        'image' => "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+        'image' => "../assets/service4.png",
         'imageAlt' => "eCommerce platform benefits",
         'cta' => "Talk to an Expert",
         'benefits' => [

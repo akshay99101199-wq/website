@@ -165,7 +165,7 @@
         'title' => "Why Dhronix Cloud",
         'highlight' => "Hosting is Different",
         'description' => "We host 500+ websites and applications across India with zero compromise on security and speed.",
-        'image' => "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1470&auto=format&fit=crop",
+        'image' => "../assets/service1.png",
         'imageAlt' => "Cloud hosting infrastructure",
         'cta' => "Get Hosting Quote",
         'benefits' => [
