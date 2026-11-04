@@ -141,6 +141,8 @@ $(document).ready(function () {
         const heroPreviousButton = heroCarousel.querySelector('[data-hero-prev]');
         const heroNextButton = heroCarousel.querySelector('[data-hero-next]');
         const heroCurrentCounter = heroCarousel.querySelector('[data-hero-current]');
+        const heroViewport = heroCarousel.querySelector('.hero-carousel-viewport');
+        const heroContents = heroSlides.map((slide) => slide.querySelector('.hero-content'));
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         let currentHeroIndex = heroSlides.findIndex((slide) => slide.classList.contains('is-active'));
         let heroRotationTimer;
@@ -148,6 +150,24 @@ $(document).ready(function () {
         let isHeroTransitioning = false;
 
         if (currentHeroIndex < 0) currentHeroIndex = 0;
+
+        const alignHeroContent = () => {
+            if (!heroViewport || heroContents.some((content) => !content)) return;
+
+            heroContents.forEach((content) => content.style.removeProperty('--hero-content-offset'));
+
+            const viewportRect = heroViewport.getBoundingClientRect();
+            const baselineRect = heroContents[1].getBoundingClientRect();
+            const baselineGap = viewportRect.bottom - baselineRect.bottom;
+            const tallestContent = Math.max(...heroContents.map((content) => content.offsetHeight));
+            const targetGap = Math.min(baselineGap + 20, Math.max(0, heroViewport.clientHeight - tallestContent));
+
+            heroContents.forEach((content) => {
+                const contentRect = content.getBoundingClientRect();
+                const currentGap = viewportRect.bottom - contentRect.bottom;
+                content.style.setProperty('--hero-content-offset', `${currentGap - targetGap}px`);
+            });
+        };
 
         const updateHeroControls = () => {
             if (heroCurrentCounter) {
@@ -226,6 +246,14 @@ $(document).ready(function () {
             slide.inert = !isActive;
         });
         updateHeroControls();
+        alignHeroContent();
+        window.addEventListener('resize', alignHeroContent, { passive: true });
+        if (heroViewport && heroContents.every(Boolean)) {
+            const heroAlignmentObserver = new ResizeObserver(alignHeroContent);
+            heroAlignmentObserver.observe(heroViewport);
+            heroContents.forEach((content) => heroAlignmentObserver.observe(content));
+        }
+        if (document.fonts) document.fonts.ready.then(alignHeroContent);
 
         if (heroPreviousButton) {
             heroPreviousButton.addEventListener('click', () => showHeroSlide(currentHeroIndex - 1));
@@ -241,7 +269,10 @@ $(document).ready(function () {
             });
         });
 
-        document.addEventListener('dhronix:hero-ready', () => scheduleHeroRotation(), { once: true });
+        document.addEventListener('dhronix:hero-ready', () => {
+            alignHeroContent();
+            scheduleHeroRotation();
+        }, { once: true });
         if (heroCarousel.classList.contains('is-ready')) scheduleHeroRotation();
         document.addEventListener('visibilitychange', () => {
             if (document.hidden) {

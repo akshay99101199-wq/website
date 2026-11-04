@@ -194,26 +194,9 @@
             <h2>Benefits of Dhronix <span class="highlight">Nidhi Software</span></h2>
             <p>Trusted by 200+ Nidhi Companies across India, our platform is the most reliable choice for your business growth.</p>
         </div>
-        <div class="nidhi-software-illustration animate-on-scroll" role="img" aria-label="Nidhi software dashboard connected with member, deposit, loan, and reporting features">
-            <div class="nidhi-orbit-card nidhi-orbit-card--members"><i class="fas fa-users"></i><span>Members</span></div>
-            <div class="nidhi-orbit-card nidhi-orbit-card--deposits"><i class="fas fa-piggy-bank"></i><span>Deposits</span></div>
-            <div class="nidhi-orbit-card nidhi-orbit-card--loans"><i class="fas fa-hand-holding-usd"></i><span>Loans</span></div>
-            <div class="nidhi-orbit-card nidhi-orbit-card--reports"><i class="fas fa-chart-pie"></i><span>Reports</span></div>
-            <div class="nidhi-laptop">
-                <div class="nidhi-laptop-screen">
-                    <div class="nidhi-laptop-topbar"><span></span><span></span><span></span><strong>DHRONIX <small>NIDHI</small></strong><i class="fas fa-bell"></i></div>
-                    <div class="nidhi-laptop-dashboard">
-                        <div class="nidhi-laptop-nav"><b><i class="fas fa-th-large"></i></b><i class="fas fa-users"></i><i class="fas fa-wallet"></i><i class="fas fa-file-alt"></i></div>
-                        <div class="nidhi-laptop-main">
-                            <div class="nidhi-laptop-welcome"><span>Good morning, Admin</span><strong>Company overview</strong></div>
-                            <div class="nidhi-laptop-metrics"><span><small>Total members</small><b>1,248</b></span><span><small>Total deposits</small><b>₹2.4 Cr</b></span><span><small>Active loans</small><b>342</b></span></div>
-                            <div class="nidhi-laptop-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nidhi-laptop-base"></div>
-            </div>
-        </div>
+        
+        <img src="{{ asset('assets/service2.png') }}" alt="Nidhi Software Demo" width="600" height="400" style="display:block;max-width:100%;height:auto;margin:0 auto 24px;border-radius:8px;">
+         
         <div class="nidhi-benefit-cards">
             <article class="nidhi-benefit-card animate-on-scroll">
                 <span class="nidhi-benefit-icon"><i class="fas fa-globe"></i></span>

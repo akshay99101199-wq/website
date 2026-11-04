@@ -160,7 +160,7 @@
         'title' => "Why Dhronix ERP is",
         'highlight' => "Best for Your Business",
         'description' => "Trusted by manufacturers, traders, service companies, and retail chains across India.",
-        'image' => "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+        'image' => "../assets/service5.png",
         'imageAlt' => "ERP accounting benefits",
         'cta' => "Talk to an Expert",
         'benefits' => [

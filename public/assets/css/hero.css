@@ -1254,7 +1254,7 @@
 /* Animated homepage hero */
 .hero-carousel-viewport {
     position: relative;
-    min-height: clamp(560px, calc(100vh - 190px), 670px);
+    min-height: calc(clamp(560px, calc(100vh - 190px), 670px) + 40px);
     overflow: hidden;
 }
 
@@ -1308,6 +1308,7 @@
 
 .hero-slide .hero-content {
     max-width: 690px;
+    transform: translateY(var(--hero-content-offset, 0px));
 }
 
 .hero-slide .hero-badge {
@@ -1599,7 +1600,7 @@
 
 @media (max-width: 1024px) {
     .hero-carousel-viewport {
-        min-height: clamp(560px, calc(100vh - 180px), 640px);
+        min-height: calc(clamp(560px, calc(100vh - 180px), 640px) + 20px);
     }
 
     .home-back-to-top {
@@ -1632,7 +1633,7 @@
 
 @media (max-width: 767px) {
     .hero-carousel-viewport {
-        min-height: 600px;
+        min-height: 620px;
     }
 
     .hero-slide .hero-container {
@@ -1670,7 +1671,7 @@
 
 @media (max-width: 420px) {
     .hero-carousel-viewport {
-        min-height: 570px;
+        min-height: 590px;
     }
 
     .hero-slide .hero-container {

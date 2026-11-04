@@ -158,16 +158,13 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="side-img animate-on-scroll delay-2"><img
-                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop"
-                    alt="Loan Process"></div> -->
         </div>
     </section>
     @include('services.partials.why-choose-us', [
     'title' => "Benefits of Dhronix",
     'highlight' => "NBFC Software",
     'description' => "Designed specifically for Indian NBFCs, our platform handles everything from micro-loans to large corporate credit.",
-    'image' => "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+    'image' => asset('assets/service6.png'),
     'imageAlt' => "NBFC software benefits",
     'cta' => "Talk to an Expert",
     'benefits' => [

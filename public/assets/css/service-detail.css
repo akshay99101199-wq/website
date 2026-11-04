@@ -2124,6 +2124,21 @@
     box-shadow: 0 18px 42px rgba(13, 40, 71, 0.14);
 }
 
+.service-detail--nbfc-software .service-why-section .nidhi-benefit-image {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    box-shadow: none;
+}
+
+.service-detail.service-detail--erp-accounting .service-why-section .nidhi-benefit-image {
+    width: 50%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    box-shadow: none;
+}
+
 .service-detail .service-why-section .nidhi-benefit-cards {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -2464,6 +2479,27 @@
 
     .service-detail:not(.service-detail--nidhi-software) .service-page-hero .service-hero-img:hover img {
         transform: scale(1.045);
+    }
+}
+
+.service-detail.service-detail--erp-accounting .service-page-hero--erp-accounting .service-hero-img {
+    box-shadow: none;
+}
+
+.service-detail.service-detail--erp-accounting .service-page-hero--erp-accounting .service-hero-img img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .service-detail.service-detail--erp-accounting .service-page-hero--erp-accounting .service-hero-img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .service-detail.service-detail--erp-accounting .service-page-hero--erp-accounting .service-hero-img:hover img {
+        transform: none;
     }
 }
 
