@@ -36,36 +36,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 2. Typing Effect Logic ---
-    const textArray = ["Our Company", "Nidhi Software", "ERP Accounting", "NBFC Software", "eCommerce", "Mobile Apps", "Cloud Hosting"];
-    let textIndex = 0;
-    let charIndex = 0;
+    const typedTextSpans = Array.from(document.querySelectorAll('.typed-text'));
     const typingDelay = 100;
     const erasingDelay = 50;
-    const newTextDelay = 2000;
-    const typedTextSpan = document.querySelector(".typed-text");
+    const newTextDelay = 1400;
+    let activeTypedSpan;
+    let typingTimer;
+    const heroCarouselForTyping = document.querySelector('[data-hero-carousel]');
 
-    function type() {
-        if(!typedTextSpan) return;
-        if (charIndex < textArray[textIndex].length) {
-            typedTextSpan.textContent += textArray[textIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-        } else {
-            setTimeout(erase, newTextDelay);
-        }
-    }
+    const stopTyping = () => {
+        window.clearTimeout(typingTimer);
+        activeTypedSpan = null;
+        typedTextSpans.forEach((span) => {
+            span.textContent = '';
+        });
+    };
 
-    function erase() {
-        if(!typedTextSpan) return;
-        if (charIndex > 0) {
-            typedTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(erase, erasingDelay);
-        } else {
-            textIndex++;
-            if (textIndex >= textArray.length) textIndex = 0;
-            setTimeout(type, typingDelay + 500);
-        }
+    const startTyping = (typedTextSpan) => {
+        stopTyping();
+        if (!typedTextSpan) return;
+
+        const words = (typedTextSpan.dataset.typedWords || '')
+            .split('|')
+            .map((word) => word.trim())
+            .filter(Boolean);
+        if (!words.length) return;
+
+        activeTypedSpan = typedTextSpan;
+        let textIndex = 0;
+        let charIndex = 0;
+
+        const type = () => {
+            if (activeTypedSpan !== typedTextSpan) return;
+            const word = words[textIndex];
+            if (charIndex < word.length) {
+                typedTextSpan.textContent += word.charAt(charIndex);
+                charIndex += 1;
+                typingTimer = window.setTimeout(type, typingDelay);
+            } else {
+                typingTimer = window.setTimeout(erase, newTextDelay);
+            }
+        };
+
+        const erase = () => {
+            if (activeTypedSpan !== typedTextSpan) return;
+            if (charIndex > 0) {
+                charIndex -= 1;
+                typedTextSpan.textContent = words[textIndex].substring(0, charIndex);
+                typingTimer = window.setTimeout(erase, erasingDelay);
+            } else {
+                textIndex = (textIndex + 1) % words.length;
+                typingTimer = window.setTimeout(type, typingDelay + 250);
+            }
+        };
+
+        typingTimer = window.setTimeout(type, 1200);
+    };
+
+    if (heroCarouselForTyping) {
+        document.addEventListener('dhronix:hero-slide-change', (event) => {
+            startTyping(event.detail.slide.querySelector('.typed-text'));
+        });
     }
 
     // --- 3. Loader Logic ---
@@ -76,12 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 preloader.style.display = 'none';
                 triggerHeroAnimations();
-                if(typedTextSpan) setTimeout(type, newTextDelay - 1000);
             }, 500);
         }, 1200);
     } else {
         triggerHeroAnimations();
-        if(typedTextSpan) setTimeout(type, 500);
     }
 
     // --- 4. Header Scroll Effect ---
@@ -112,6 +141,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function triggerHeroAnimations() {
         const heroElements = document.querySelectorAll('.animate-fade-up');
         heroElements.forEach(el => el.classList.add('visible'));
+
+        const heroCarousel = document.querySelector('[data-hero-carousel]');
+        if (heroCarousel) {
+            heroCarousel.classList.add('is-ready');
+            window.requestAnimationFrame(() => heroCarousel.classList.remove('is-loading'));
+            startTyping(heroCarousel.querySelector('[data-hero-slide].is-active .typed-text'));
+            document.dispatchEvent(new Event('dhronix:hero-ready'));
+        } else if (typedTextSpans.length) {
+            startTyping(typedTextSpans[0]);
+        }
     }
 
 

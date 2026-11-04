@@ -1,15 +1,14 @@
 @extends('layouts.app')
 @section('title','Dhronix Bharat Technologies | IT Solutions')
 @section('content')
-<section class="hero-section hero" id="home" style="background-image: url('assets/hero2.png');background-repeat: no-repeat;
+<section class="hero-section hero home-hero-carousel is-loading" id="home" style="background-image: url('assets/hero2.png');background-repeat: no-repeat;
        background-size:100% 90%;" data-hero-carousel aria-roledescription="carousel" aria-label="Dhronix software solutions">
     <div class="hero-carousel-viewport">
         <article class="hero-slide is-active" data-hero-slide role="group" aria-roledescription="slide" aria-label="1 of 3" aria-hidden="false" aria-labelledby="hero-slide-title-1">
             <div class="container hero-container">
                 <div class="hero-content">
                     <span class="hero-badge animate-fade-up"><i class="fa-solid fa-award"></i> Leading IT Technology Partner</span>
-                    <h1 class="animate-fade-up delay-1">Next-Gen Software <br>Platform for <br><span class="highlight"><span
-                                class="typed-text"></span><span class="cursor-blink">|</span></span></h1>
+                    <h1 class="hero-slide-title" id="hero-slide-title-1" aria-label="Next-Gen Software for your business">Next-Gen Software<br>for <span class="highlight"><span class="typed-text typed-text--financial" data-typed-words="your business.|Nidhi Software|NBFC Software|ERP Accounting|eCommerce|Mobile Apps|Cloud Hosting" aria-hidden="true"></span></span><span class="hero-title-overlays" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span></h1>
 
                     <p class="lead-text animate-fade-up delay-2">We provide comprehensive software solutions including
                         Nidhi
@@ -44,8 +43,7 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <span class="hero-badge animate-fade-up"><i class="fa-solid fa-award"></i>  BUSINESS OPERATIONS</span>
-                    <h1 class="animate-fade-up delay-1">Every operation,<br>in sync <br><span class="highlight"><span
-                                class="typed-text"></span><span class="cursor-blink">|</span></span></h1>
+                    <h1 class="hero-slide-title" id="hero-slide-title-2" aria-label="Every operation, in sync">Every operation,<br><span class="highlight"><span class="typed-text typed-text--operations" data-typed-words="in sync.|connected.|under control." aria-hidden="true"></span></span><span class="hero-title-overlays" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span></h1>
 
                     <p class="lead-text animate-fade-up delay-2">Bring accounting, inventory, teams, and reporting together with a smarter ERP workflow.</p>
                     <div class="hero-input-group">
@@ -77,8 +75,7 @@
             <div class="container hero-container">
                 <div class="hero-content">
                       <span class="hero-badge animate-fade-up"><i class="fa-solid fa-award"></i>  DIGITAL EXPERIENCES</span>
-                    <h1 class="animate-fade-up delay-1">Make every<br>interaction <br><span class="highlight">count<span
-                                class="typed-text"></span><span class="cursor-blink">|</span></span></h1>
+                    <h1 class="hero-slide-title" id="hero-slide-title-3" aria-label="Make every interaction count">Make every<br>interaction <span class="highlight"><span class="typed-text typed-text--digital" data-typed-words="count.|stand out|grow with you" aria-hidden="true"></span></span><span class="hero-title-overlays" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span></h1>
 
                     <p class="lead-text animate-fade-up delay-2">Launch polished eCommerce, cloud, and mobile experiences that are ready to grow with you.</p>
                    
@@ -132,6 +129,10 @@
     </div>
 
 </section>
+
+<button class="home-back-to-top" type="button" data-back-to-top aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
 
 <!-- 2. Stats Section -->
 

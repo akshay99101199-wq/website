@@ -141,7 +141,6 @@ $(document).ready(function () {
         const heroPreviousButton = heroCarousel.querySelector('[data-hero-prev]');
         const heroNextButton = heroCarousel.querySelector('[data-hero-next]');
         const heroCurrentCounter = heroCarousel.querySelector('[data-hero-current]');
-        const heroControls = [...heroDots, heroPreviousButton, heroNextButton].filter(Boolean);
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         let currentHeroIndex = heroSlides.findIndex((slide) => slide.classList.contains('is-active'));
         let heroRotationTimer;
@@ -164,18 +163,17 @@ $(document).ready(function () {
         const canRotateHero = () => (
             !prefersReducedMotion
             && !document.hidden
-            && !heroCarousel.matches(':hover')
-            && !heroCarousel.contains(document.activeElement)
+            && heroCarousel.classList.contains('is-ready')
             && !isHeroTransitioning
             && heroSlides.length > 1
         );
 
-        const scheduleHeroRotation = () => {
+        const scheduleHeroRotation = (delay = 7000) => {
             window.clearTimeout(heroRotationTimer);
             if (canRotateHero()) {
                 heroRotationTimer = window.setTimeout(
                     () => showHeroSlide(currentHeroIndex + 1),
-                    7000
+                    delay
                 );
             }
         };
@@ -206,6 +204,9 @@ $(document).ready(function () {
             window.requestAnimationFrame(() => {
                 incomingSlide.classList.add('is-active');
                 incomingSlide.classList.remove('is-entering');
+                document.dispatchEvent(new CustomEvent('dhronix:hero-slide-change', {
+                    detail: { index: nextHeroIndex, slide: incomingSlide }
+                }));
             });
 
             currentHeroIndex = nextHeroIndex;
@@ -214,7 +215,7 @@ $(document).ready(function () {
             heroTransitionTimer = window.setTimeout(() => {
                 outgoingSlide.classList.remove('is-exiting-down');
                 isHeroTransitioning = false;
-                scheduleHeroRotation();
+                scheduleHeroRotation(5900);
             }, prefersReducedMotion ? 0 : 1100);
         };
 
@@ -240,14 +241,31 @@ $(document).ready(function () {
             });
         });
 
-        heroCarousel.addEventListener('mouseenter', () => window.clearTimeout(heroRotationTimer));
-        heroCarousel.addEventListener('mouseleave', scheduleHeroRotation);
-        heroCarousel.addEventListener('focusin', () => window.clearTimeout(heroRotationTimer));
-        heroCarousel.addEventListener('focusout', (event) => {
-            if (!heroCarousel.contains(event.relatedTarget)) scheduleHeroRotation();
+        document.addEventListener('dhronix:hero-ready', () => scheduleHeroRotation(), { once: true });
+        if (heroCarousel.classList.contains('is-ready')) scheduleHeroRotation();
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                window.clearTimeout(heroRotationTimer);
+            } else {
+                scheduleHeroRotation();
+            }
         });
-        document.addEventListener('visibilitychange', scheduleHeroRotation);
-        scheduleHeroRotation();
+    }
+
+    const backToTopButton = document.querySelector('[data-back-to-top]');
+    const homepageHero = document.querySelector('[data-hero-carousel]');
+
+    if (backToTopButton && homepageHero) {
+        const heroVisibilityObserver = new IntersectionObserver(([entry]) => {
+            const heroHasPassed = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
+            backToTopButton.classList.toggle('is-visible', heroHasPassed);
+        });
+
+        heroVisibilityObserver.observe(homepageHero);
+        backToTopButton.addEventListener('click', () => {
+            const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+            window.scrollTo({ top: 0, behavior });
+        });
     }
 
     const slides = $('.slide-window .slide');
