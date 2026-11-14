@@ -125,13 +125,13 @@
             <div><a href="{{ route('contact') }}" class="btn btn-primary-solid">Contact Now</a></div>
         </div>
         <div class="feature-image-stack" aria-hidden="true">
-            <figure class="feature-stack-card" data-position="0"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
-            <figure class="feature-stack-card" data-position="1"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
-            <figure class="feature-stack-card" data-position="2"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
-            <figure class="feature-stack-card" data-position="3"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
-            <figure class="feature-stack-card" data-position="4"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
-            <figure class="feature-stack-card" data-position="5"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
-            <figure class="feature-stack-card" data-position="6"><img src="{{ asset('assets/choose.png') }}" alt=""></figure>
+            <figure class="feature-stack-card" data-position="0"><img src="{{ asset('assets/about_service1.png') }}" alt=""></figure>
+            <figure class="feature-stack-card" data-position="1"><img src="{{ asset('assets/about_service2.png') }}" alt=""></figure>
+            <figure class="feature-stack-card" data-position="2"><img src="{{ asset('assets/about_service3.png') }}" alt=""></figure>
+            <figure class="feature-stack-card" data-position="3"><img src="{{ asset('assets/about_service4.png') }}" alt=""></figure>
+            <figure class="feature-stack-card" data-position="4"><img src="{{ asset('assets/about_service5.png') }}" alt=""></figure>
+            <figure class="feature-stack-card" data-position="5"><img src="{{ asset('assets/about_service6.png') }}" alt=""></figure>
+            <figure class="feature-stack-card" data-position="6"><img src="{{ asset('assets/about_service7.png') }}" alt=""></figure>
         </div>
     </div>
 </section>
