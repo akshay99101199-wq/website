@@ -1384,9 +1384,11 @@ body p {
 
 .ecosystem-flow-core-logo {
     display: block;
-    width: 76%;
-    height: 56%;
+    width: 64%;
+    height: 64%;
+    box-sizing: border-box;
     object-fit: contain;
+    filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, .95));
 }
 
 .ecosystem-flow-core > span:last-child {
@@ -1419,6 +1421,11 @@ body p {
     font-size: clamp(8px, .85vw, 11px);
     font-weight: 700;
     line-height: 1.2;
+}
+
+.ecosystem-flow-feature-security i,
+.ecosystem-flow-feature-security span {
+    color: var(--primary-dark);
 }
 
 .ecosystem-flow-feature-security {

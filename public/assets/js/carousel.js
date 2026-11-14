@@ -286,13 +286,23 @@ $(document).ready(function () {
     const backToTopButton = document.querySelector('[data-back-to-top]');
     const homepageHero = document.querySelector('[data-hero-carousel]');
 
-    if (backToTopButton && homepageHero) {
-        const heroVisibilityObserver = new IntersectionObserver(([entry]) => {
-            const heroHasPassed = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
-            backToTopButton.classList.toggle('is-visible', heroHasPassed);
-        });
+    if (backToTopButton) {
+        if (homepageHero) {
+            const heroVisibilityObserver = new IntersectionObserver(([entry]) => {
+                const heroHasPassed = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
+                backToTopButton.classList.toggle('is-visible', heroHasPassed);
+            });
 
-        heroVisibilityObserver.observe(homepageHero);
+            heroVisibilityObserver.observe(homepageHero);
+        } else {
+            const updateBackToTopVisibility = () => {
+                backToTopButton.classList.toggle('is-visible', window.scrollY > 240);
+            };
+
+            window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+            updateBackToTopVisibility();
+        }
+
         backToTopButton.addEventListener('click', () => {
             const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
             window.scrollTo({ top: 0, behavior });

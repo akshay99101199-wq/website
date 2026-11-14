@@ -116,6 +116,17 @@
                         data-project-category="{{ $project['category'] }}">
                         <div class="portfolio-card-image">
                             <img src="{{ $project['image'] }}" alt="{{ $project['alt'] }}" loading="lazy">
+                            <div class="portfolio-image-reveal" aria-hidden="true">
+                                <span class="portfolio-image-reveal-panel"></span>
+                                <span class="portfolio-image-reveal-panel"></span>
+                                <span class="portfolio-image-reveal-panel"></span>
+                                <span class="portfolio-image-reveal-panel"></span>
+                                <div class="portfolio-image-reveal-copy">
+                                    <span>{{ $project['product'] }} &middot; {{ $project['category'] }}</span>
+                                    <strong>{{ $project['title'] }}</strong>
+                                    <p>{{ $project['description'] }}</p>
+                                </div>
+                            </div>
                             <button class="portfolio-view-button" type="button" data-project-open>
                                 View Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                             </button>

@@ -130,10 +130,6 @@
 
 </section>
 
-<button class="home-back-to-top" type="button" data-back-to-top aria-label="Back to top">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-</button>
-
 <!-- 2. Stats Section -->
 
 <section class="stats-section section-padding-stats">

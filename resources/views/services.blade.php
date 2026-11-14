@@ -227,7 +227,7 @@
                     <path class="ecosystem-flow-path" d="M311 188H325C395 188 405 250 520 250"></path>
                     <path class="ecosystem-flow-path" d="M311 313H325C395 313 405 250 520 250"></path>
                     <path class="ecosystem-flow-path" d="M195 373H320C390 373 375 250 520 250"></path>
-                    <path class="ecosystem-flow-path" d="M355 443H365C440 443 410 250 520 250"></path>
+                    <path class="ecosystem-flow-path" d="M388 443H398C473 443 410 250 520 250"></path>
                     <circle class="ecosystem-flow-junction" cx="520" cy="250" r="5"></circle>
                     <path class="ecosystem-flow-path ecosystem-flow-path-main"
                         d="M526 250H620" marker-end="url(#ecosystem-flow-arrow)"></path>

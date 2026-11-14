@@ -18,6 +18,21 @@
 	background: var(--portfolio-navy-deep) url('../portfolio.png') center 42% / cover no-repeat;
 }
 
+.portfolio-hero,
+.portfolio-main,
+.portfolio-dialog {
+	font-family: 'Poppins', sans-serif;
+}
+
+.portfolio-hero h1,
+.portfolio-hero h5,
+.portfolio-section-heading h2,
+.portfolio-card h3,
+.portfolio-cta h2,
+.portfolio-dialog h2 {
+	font-family: 'Montserrat', sans-serif;
+}
+
 .portfolio-hero::before {
 	content: "";
 	position: absolute;
@@ -182,6 +197,7 @@
 
 .portfolio-card-image {
 	position: relative;
+	isolation: isolate;
 	aspect-ratio: 1.62;
 	overflow: hidden;
 	background: #dce3e9;
@@ -199,8 +215,90 @@
 	transform: scale(1.035);
 }
 
+.portfolio-image-reveal {
+	position: absolute;
+	z-index: 1;
+	inset: 0;
+	pointer-events: none;
+}
+
+.portfolio-image-reveal-panel {
+	position: absolute;
+	top: 0;
+	width: 25%;
+	height: 100%;
+	background: linear-gradient(135deg, var(--portfolio-navy), #2b6a9e);
+	opacity: 0;
+	transform: scaleX(0);
+	transition: transform 500ms ease, opacity 500ms ease;
+}
+
+.portfolio-image-reveal-panel:nth-child(1) {
+	left: 0;
+	transition-delay: 105ms;
+}
+
+.portfolio-image-reveal-panel:nth-child(2) {
+	left: 25%;
+	transition-delay: 105ms;
+}
+
+.portfolio-image-reveal-panel:nth-child(3) {
+	left: 50%;
+	transition-delay: 105ms;
+}
+
+.portfolio-image-reveal-panel:nth-child(4) {
+	right: 0;
+	transition-delay: 0ms;
+}
+
+.portfolio-image-reveal-copy {
+	position: absolute;
+	z-index: 1;
+	inset: 18px 18px 54px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 8px;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(8px);
+	transition: opacity 220ms ease 170ms, transform 220ms ease 170ms;
+}
+
+.portfolio-image-reveal-copy > span {
+	color: #ffad75;
+	font: 700 9px 'Poppins', sans-serif;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.portfolio-image-reveal-copy strong {
+	font: 700 clamp(14px, 1.35vw, 18px)/1.3 'Montserrat', sans-serif;
+}
+
+.portfolio-image-reveal-copy p {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.82);
+	font: 400 11px/1.55 'Poppins', sans-serif;
+}
+
+.portfolio-card-image:hover .portfolio-image-reveal-panel,
+.portfolio-card:focus-within .portfolio-image-reveal-panel {
+	opacity: 1;
+	transform: scaleX(1);
+}
+
+.portfolio-card-image:hover .portfolio-image-reveal-copy,
+.portfolio-card:focus-within .portfolio-image-reveal-copy {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 .portfolio-view-button {
 	position: absolute;
+	z-index: 2;
 	right: 14px;
 	bottom: 14px;
 	display: inline-flex;
@@ -434,6 +532,8 @@
 @media (prefers-reduced-motion: reduce) {
 	.portfolio-card,
 	.portfolio-card-image img,
+	.portfolio-image-reveal-panel,
+	.portfolio-image-reveal-copy,
 	.portfolio-filter,
 	.portfolio-cta-link {
 		transition: none;

@@ -67,6 +67,10 @@
         </a>
     </nav>
 
+    <button class="home-back-to-top" type="button" data-back-to-top aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
