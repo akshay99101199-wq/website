@@ -292,59 +292,63 @@
 </script>
 
 <!-- 7. Our Testimonial Section -->
-<section class="section-padding" style="background-color: #fafbfc;">
+<section class="about-testimonials-section section-padding" aria-labelledby="about-testimonials-heading">
     <div class="container">
-        <div style="max-width: 600px;" class="animate-on-scroll">
-            <span class="sub-heading">OUR TESTIMONIAL</span>
-            <h2 style="font-size: 38px; margin-bottom: 20px;">1250+ customers say <br><span class="highlight">about
-                    our software</span></h2>
+        <div class="about-testimonials-heading animate-on-scroll">
+            <div class="about-testimonials-copy">
+                <span class="sub-heading">CLIENT STORIES</span>
+                <h2 id="about-testimonials-heading">Trusted by <span class="highlight">1,250+ customers</span></h2>
+            </div>
             <p>With over 1,250 satisfied clients, our IT and consulting services have earned praise for reliability,
                 personalized guidance, and impactful results.</p>
         </div>
 
-        <div class="testimonial-carousel animate-on-scroll delay-1">
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <p class="test-text">"Their Nidhi and ERP solutions have simplified our operations and provided
-                    greater ease for our customers. The reliability, security, and positive impact on customer
-                    retention have been remarkable."</p>
-                <div class="author">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1587&auto=format&fit=crop"
-                        alt="Richa">
-                    <div>
-                        <h4 style="margin:0; font-size:16px;">Richa Singh</h4>
-                        <span
-                            style="font-size:12px; color:var(--secondary-color); font-weight:600; text-transform:uppercase;">Entrepreneur</span>
+        <div class="testimonial-carousel animate-on-scroll delay-1" role="region"
+            aria-label="Client testimonials" aria-roledescription="carousel">
+            <div class="testimonial-slide">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1587&auto=format&fit=crop"
+                            alt="Richa">
+                        <div>
+                            <h4 class="author-name">Richa Singh</h4>
+                            <span class="author-role">Entrepreneur</span>
+                        </div>
                     </div>
+                    <blockquote class="test-text">Their Nidhi and ERP solutions have simplified our operations and provided
+                        greater ease for our customers. The reliability, security, and positive impact on customer
+                        retention have been remarkable.</blockquote>
                 </div>
             </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <p class="test-text">"Choosing Dhronix for our eCommerce development was the best decision. Their
-                    technical approach and 24/7 support transformed our online presence and significantly boosted
-                    our sales."</p>
-                <div class="author">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1587&auto=format&fit=crop"
-                        alt="Amit">
-                    <div>
-                        <h4 style="margin:0; font-size:16px;">Amit Patel</h4>
-                        <span
-                            style="font-size:12px; color:var(--secondary-color); font-weight:600; text-transform:uppercase;">CEO,
-                            Retail Solutions</span>
+            <div class="testimonial-slide">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1587&auto=format&fit=crop"
+                            alt="Amit">
+                        <div>
+                            <h4 class="author-name">Amit Patel</h4>
+                            <span class="author-role">CEO, Retail Solutions</span>
+                        </div>
                     </div>
+                    <blockquote class="test-text">Choosing Dhronix for our eCommerce development was the best decision. Their
+                        technical approach and 24/7 support transformed our online presence and significantly boosted
+                        our sales.</blockquote>
                 </div>
             </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <p class="test-text">"The onboarding experience was smooth, and the custom modules helped us scale faster while keeping our data and processes secure."</p>
-                <div class="author">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1587&auto=format&fit=crop"
-                        alt="Rahul">
-                    <div>
-                        <h4 style="margin:0; font-size:16px;">Rahul Sharma</h4>
-                        <span
-                            style="font-size:12px; color:var(--secondary-color); font-weight:600; text-transform:uppercase;">Operations Head</span>
+            <div class="testimonial-slide">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1587&auto=format&fit=crop"
+                            alt="Rahul">
+                        <div>
+                            <h4 class="author-name">Rahul Sharma</h4>
+                            <span class="author-role">Operations Head</span>
+                        </div>
                     </div>
+                    <blockquote class="test-text">The onboarding experience was smooth, and the custom modules helped us scale faster while keeping our data and processes secure.</blockquote>
                 </div>
             </div>
         </div>
